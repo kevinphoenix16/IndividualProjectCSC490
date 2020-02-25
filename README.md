@@ -1,1 +1,1 @@
-# IndividualProjectCSC490
+# Individual Project CSC 490
