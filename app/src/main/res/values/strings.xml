@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">Individual Project CSC490</string>
-    <string name="homepage_title">FI/RE</string>
 
+    //Home page references
+    <string name="homePage_title">FI/RE</string>
     <string name="calc_button">Calculators</string>
     <string name="budget_button">Budgeting</string>
     <string name="ref_button">References</string>
+
+    //Calculator page buttons
+    <string name="calcPage_title">FI/RE Calculators</string>
+    <string name="FIRE_button">FI/RE Number Calculator</string>
+    <string name="saveRate_button">Savings Rate Calculator</string>
+    <string name="spendRate_button">Average Spending Calculator</string>
 
 </resources>
