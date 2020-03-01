@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Individual Project CSC490</string>
+    <string name="homepage_title">FI/RE</string>
+
+    <string name="calc_button">Calculators</string>
+    <string name="budget_button">Budgeting</string>
+    <string name="ref_button">References</string>
+
 </resources>
