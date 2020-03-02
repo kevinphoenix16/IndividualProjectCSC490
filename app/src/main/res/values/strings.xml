@@ -16,4 +16,7 @@
     //Budgeting page strings
     <string name="budgetPage_title">Budget Creator</string>
 
+    //Reference page strings
+    <string name="refPage_title">References</string>
+
 </resources>
