@@ -37,6 +37,15 @@ public class CalculatorsPage extends AppCompatActivity {
                 openSavingsRatePage();
             }
         });
+
+        //AverageSpending Button
+        averageSpendingButton = (Button) findViewById(R.id.averageSpendingButton);
+        averageSpendingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAverageSpendingPage();
+            }
+        });
     }
 
     //Switches to FIRENumberPage Activity
@@ -48,6 +57,12 @@ public class CalculatorsPage extends AppCompatActivity {
     //Switches to SavingsRatePage Activity
     public void openSavingsRatePage(){
         Intent intent = new Intent(this, SavingsRatePage.class);
+        startActivity(intent);
+    }
+
+    //Switches to SavingsRatePage Activity
+    public void openAverageSpendingPage(){
+        Intent intent = new Intent(this, AverageSpendingPage.class);
         startActivity(intent);
     }
 }
