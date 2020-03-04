@@ -2,21 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/FIRENumberPage"
+    android:id="@+id/savingsRatePage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Calculators.FIRENumberPage">
+    tools:context=".Calculators.SavingsRatePage">
 
     <TextView
-        android:id="@+id/FIRENumberPageTitle"
+        android:id="@+id/savingsRatePageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/FIRENumberPage_title"
+        android:text="@string/savingsRatePage_title"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.07" />
 </androidx.constraintlayout.widget.ConstraintLayout>

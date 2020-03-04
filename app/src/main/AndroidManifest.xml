@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Calculators.FIRENumberPage"></activity>
+        <activity android:name=".Calculators.SavingsRatePage"></activity>
+        <activity android:name=".Calculators.FIRENumberPage" />
         <activity android:name=".ReferencesPage" />
         <activity android:name=".BudgetingPage" />
         <activity android:name=".CalculatorsPage" />

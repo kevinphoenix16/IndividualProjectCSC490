@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.individualprojectcsc490.Calculators.*;
+
 public class CalculatorsPage extends AppCompatActivity {
 
     private Button FIRENumberButton;
@@ -26,11 +28,26 @@ public class CalculatorsPage extends AppCompatActivity {
                 openFIRENumberPage();
             }
         });
+
+        //SavingsRate Button
+        savingsRateButton = (Button) findViewById(R.id.savingsRateButton);
+        savingsRateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSavingsRatePage();
+            }
+        });
     }
 
     //Switches to FIRENumberPage Activity
     public void openFIRENumberPage(){
-        Intent intent = new Intent(this, CalculatorsPage.class);
+        Intent intent = new Intent(this, FIRENumberPage.class);
+        startActivity(intent);
+    }
+
+    //Switches to SavingsRatePage Activity
+    public void openSavingsRatePage(){
+        Intent intent = new Intent(this, SavingsRatePage.class);
         startActivity(intent);
     }
 }
