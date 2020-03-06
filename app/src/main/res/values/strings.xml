@@ -27,5 +27,11 @@
 
     //Average Spending page
     <string name="averageSpendingPage_title">Average Spending</string>
+    <string name="computeButton">Compute</string>
+    <string name="averageSpendingValue">Your Average Spending</string>
+
+    <string name="foodCategory">Food</string>
+
+    <string name="foodValue">0</string>
 
 </resources>
