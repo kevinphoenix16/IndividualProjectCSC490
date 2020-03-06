@@ -29,9 +29,12 @@
     <string name="averageSpendingPage_title">Average Spending</string>
     <string name="computeButton">Compute</string>
     <string name="averageSpendingValue">Your Average Spending</string>
+    <string name="initValue">0</string>
 
     <string name="foodCategory">Food</string>
+    <string name="foodHint">Groceries, Dining</string>
 
-    <string name="foodValue">0</string>
+    <string name="housingCategory">Housing</string>
+    <string name="housingHint">Rent, Mortgage</string>
 
 </resources>

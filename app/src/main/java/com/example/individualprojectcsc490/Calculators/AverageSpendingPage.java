@@ -18,9 +18,10 @@ public class AverageSpendingPage extends AppCompatActivity {
     private TextView averageSpendingValue;
 
     private TextView foodFieldValue;
-
-
     private double foodValue;
+
+    private TextView housingFieldValue;
+    private double housingValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,26 +41,25 @@ public class AverageSpendingPage extends AppCompatActivity {
                 * Done - Update averageSpendingValue
                 */
                 double subTotal = sumCategories();
-
                 averageSpendingValue.setText(Double.toString(subTotal));
             }
         });
-
-
     }
 
     //Sets up local variables
     private void setupUI() {
         compute              = (Button) findViewById(R.id.computeButton);
         foodFieldValue       = (TextView) findViewById(R.id.foodFieldValue);
+        housingFieldValue    = (TextView) findViewById(R.id.housingFieldValue);
         averageSpendingValue = (TextView) findViewById(R.id.averageSpendingValue);
     }
 
     //Adds up all categories of spending
     private double sumCategories(){
         foodValue = Double.parseDouble(foodFieldValue.getText().toString());
+        housingValue = Double.parseDouble(housingFieldValue.getText().toString());
 
-        return foodValue;
+        return foodValue + housingValue;
     }
 
 }
