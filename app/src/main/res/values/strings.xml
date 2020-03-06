@@ -30,6 +30,10 @@
     <string name="computeButton">Compute</string>
     <string name="averageSpendingValue">Your Average Spending</string>
     <string name="initValue">0</string>
+    <string-array name="paymentPeriodOptions">
+        <item>Monthly</item>
+        <item>Annually</item>
+    </string-array>
 
     <string name="foodCategory">Food</string>
     <string name="foodHint">Groceries, Dining</string>
