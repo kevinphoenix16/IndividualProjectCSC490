@@ -11,14 +11,14 @@ import android.widget.TextView;
 
 import com.example.individualprojectcsc490.R;
 
-public class AverageSpendingPage extends AppCompatActivity {
+public class YearlySpendingPage extends AppCompatActivity {
 
     private final int ANNUALLY = 1;
     private final int MONTHLY = 12;
 
     private Spinner paymentPeriodSpinner;
     private Button compute;
-    private TextView averageSpendingValue;
+    private TextView yearlySpendingValue;
 
     private TextView foodFieldValue;
     private double foodValue;
@@ -29,7 +29,7 @@ public class AverageSpendingPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_average_spending_page);
+        setContentView(R.layout.activity_yearly_spending_page);
 
         setupUI();
         setupSpinner();
@@ -41,15 +41,15 @@ public class AverageSpendingPage extends AppCompatActivity {
                 /* TO-DO:
                  * InProgress - Get all values from text fields
                  * Combine all values with multiplier
-                 * Done - Update averageSpendingValue
+                 * Done - Update yearlySpendingValue
                  */
                 double subTotal = sumCategories();
                 String paymentPeriod = paymentPeriodSpinner.getSelectedItem().toString();
 
                 if(paymentPeriod.equals("Monthly")){
-                    averageSpendingValue.setText(Double.toString(subTotal * MONTHLY));
+                    yearlySpendingValue.setText(Double.toString(subTotal * MONTHLY));
                 } else if(paymentPeriod.equals("Annually")) {
-                    averageSpendingValue.setText(Double.toString(subTotal * ANNUALLY));
+                    yearlySpendingValue.setText(Double.toString(subTotal * ANNUALLY));
                 }
             }
         });
@@ -59,7 +59,7 @@ public class AverageSpendingPage extends AppCompatActivity {
     private void setupUI() {
         paymentPeriodSpinner = (Spinner) findViewById(R.id.paymentPeriodSpinner);
         compute              = (Button) findViewById(R.id.computeButton);
-        averageSpendingValue = (TextView) findViewById(R.id.averageSpendingValue);
+        yearlySpendingValue = (TextView) findViewById(R.id.yearlySpendingValue);
 
         foodFieldValue       = (TextView) findViewById(R.id.foodFieldValue);
         housingFieldValue    = (TextView) findViewById(R.id.housingFieldValue);
@@ -67,7 +67,7 @@ public class AverageSpendingPage extends AppCompatActivity {
 
     //Sets up the drop-down Spinner container
     private void setupSpinner() {
-        ArrayAdapter<String> paymentPeriodAdapter = new ArrayAdapter<String>(AverageSpendingPage.this,
+        ArrayAdapter<String> paymentPeriodAdapter = new ArrayAdapter<String>(YearlySpendingPage.this,
                 android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.paymentPeriodOptions));
         paymentPeriodAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         paymentPeriodSpinner.setAdapter(paymentPeriodAdapter);

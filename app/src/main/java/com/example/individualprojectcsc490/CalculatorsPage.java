@@ -13,7 +13,7 @@ public class CalculatorsPage extends AppCompatActivity {
 
     private Button FIRENumberButton;
     private Button savingsRateButton;
-    private Button averageSpendingButton;
+    private Button yearlySpendingButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +38,12 @@ public class CalculatorsPage extends AppCompatActivity {
             }
         });
 
-        //AverageSpending Button
-        averageSpendingButton = (Button) findViewById(R.id.averageSpendingButton);
-        averageSpendingButton.setOnClickListener(new View.OnClickListener() {
+        //YearlySpending Button
+        yearlySpendingButton = (Button) findViewById(R.id.yearlySpendingButton);
+        yearlySpendingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openAverageSpendingPage();
+                openYearlySpendingPage();
             }
         });
     }
@@ -60,9 +60,9 @@ public class CalculatorsPage extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //Switches to SavingsRatePage Activity
-    public void openAverageSpendingPage(){
-        Intent intent = new Intent(this, AverageSpendingPage.class);
+    //Switches to YearlySpendingPage Activity
+    public void openYearlySpendingPage(){
+        Intent intent = new Intent(this, YearlySpendingPage.class);
         startActivity(intent);
     }
 }

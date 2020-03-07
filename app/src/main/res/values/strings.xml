@@ -11,7 +11,7 @@
     <string name="calcPage_title">FI/RE Calculators</string>
     <string name="FIRE_button">FI/RE Number Calculator</string>
     <string name="saveRate_button">Savings Rate Calculator</string>
-    <string name="spendRate_button">Average Spending Calculator</string>
+    <string name="spendRate_button">Yearly Spending Calculator</string>
 
     //Budgeting page
     <string name="budgetPage_title">Budget Creator</string>
@@ -25,10 +25,10 @@
     //Savings Rate page
     <string name="savingsRatePage_title">Savings Rate</string>
 
-    //Average Spending page
-    <string name="averageSpendingPage_title">Average Spending</string>
+    //Yearly Spending page
+    <string name="yearlySpendingPage_title">Yearly Spending</string>
     <string name="computeButton">Compute</string>
-    <string name="averageSpendingValue">Your Average Spending</string>
+    <string name="yearlySpendingValue">Your Yearly Spending</string>
     <string name="initValue">0</string>
     <string-array name="paymentPeriodOptions">
         <item>Monthly</item>
