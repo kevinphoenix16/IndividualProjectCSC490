@@ -7,6 +7,90 @@
     android:layout_height="match_parent"
     tools:context=".Calculators.YearlySpendingPage">
 
+    <TextView
+        android:id="@+id/insuranceCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/insuranceCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/insuranceFieldValue"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/insuranceFieldValue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/insuranceFieldValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/insuranceHint"
+        android:inputType="number|numberDecimal"
+        android:text="@string/initValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/utilitiesFieldValue"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <TextView
+        android:id="@+id/utilitiesCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/utilitiesCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/utilitiesFieldValue"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/utilitiesFieldValue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/utilitiesFieldValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/utilitiesHint"
+        android:inputType="number|numberDecimal"
+        android:text="@string/initValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transportationFieldValue"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <EditText
+        android:id="@+id/transportationFieldValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/transportationHint"
+        android:inputType="number|numberDecimal"
+        android:text="@string/initValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/housingFieldValue"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/transportationCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transportationCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/transportationFieldValue"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/transportationFieldValue"
+        app:layout_constraintVertical_bias="0.0" />
+
     <EditText
         android:id="@+id/housingFieldValue"
         android:layout_width="wrap_content"
@@ -29,7 +113,7 @@
         android:text="@string/housingCategory"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/foodFieldValue"
+        app:layout_constraintEnd_toStartOf="@+id/housingFieldValue"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/housingFieldValue"

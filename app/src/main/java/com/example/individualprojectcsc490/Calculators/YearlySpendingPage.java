@@ -26,6 +26,15 @@ public class YearlySpendingPage extends AppCompatActivity {
     private TextView housingFieldValue;
     private double housingValue;
 
+    private TextView transportationFieldValue;
+    private double transportationValue;
+
+    private TextView utilitiesFieldValue;
+    private double utilitiesValue;
+
+    private TextView insuranceFieldValue;
+    private double insuranceValue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,12 +66,15 @@ public class YearlySpendingPage extends AppCompatActivity {
 
     //Sets up local variables
     private void setupUI() {
-        paymentPeriodSpinner = (Spinner) findViewById(R.id.paymentPeriodSpinner);
-        compute              = (Button) findViewById(R.id.computeButton);
-        yearlySpendingValue = (TextView) findViewById(R.id.yearlySpendingValue);
+        paymentPeriodSpinner     = (Spinner) findViewById(R.id.paymentPeriodSpinner);
+        compute                  = (Button) findViewById(R.id.computeButton);
+        yearlySpendingValue      = (TextView) findViewById(R.id.yearlySpendingValue);
 
-        foodFieldValue       = (TextView) findViewById(R.id.foodFieldValue);
-        housingFieldValue    = (TextView) findViewById(R.id.housingFieldValue);
+        foodFieldValue           = (TextView) findViewById(R.id.foodFieldValue);
+        housingFieldValue        = (TextView) findViewById(R.id.housingFieldValue);
+        transportationFieldValue = (TextView) findViewById(R.id.transportationFieldValue);
+        utilitiesFieldValue      = (TextView) findViewById(R.id.utilitiesFieldValue);
+        insuranceFieldValue      = (TextView) findViewById(R.id.insuranceFieldValue);
     }
 
     //Sets up the drop-down Spinner container
@@ -75,10 +87,13 @@ public class YearlySpendingPage extends AppCompatActivity {
 
     //Adds up all categories of spending
     private double sumCategories(){
-        foodValue = Double.parseDouble(foodFieldValue.getText().toString());
-        housingValue = Double.parseDouble(housingFieldValue.getText().toString());
+        foodValue           = Double.parseDouble(foodFieldValue.getText().toString());
+        housingValue        = Double.parseDouble(housingFieldValue.getText().toString());
+        transportationValue = Double.parseDouble(transportationFieldValue.getText().toString());
+        utilitiesValue      = Double.parseDouble(utilitiesFieldValue.getText().toString());
+        insuranceValue      = Double.parseDouble(insuranceFieldValue.getText().toString());
 
-        return foodValue + housingValue;
+        return foodValue + housingValue + transportationValue + utilitiesValue;
     }
 
 }

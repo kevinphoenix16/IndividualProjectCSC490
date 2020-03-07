@@ -41,4 +41,19 @@
     <string name="housingCategory">Housing</string>
     <string name="housingHint">Rent, Mortgage</string>
 
+    <string name="transportationCategory">Transportation</string>
+    <string name="transportationHint">Car, Gas, Travel</string>
+
+    <string name="utilitiesCategory">Utilities</string>
+    <string name="utilitiesHint">Water, Gas, Electric</string>
+
+    <string name="insuranceCategory">Insurance</string>
+    <string name="insuranceHint">Housing, Car, Health</string>
+
+    <string name="healthMedicalCategory">Health and Medical</string>
+    <string name="healthMedicalHint">Medicine, Injuries, Sickness</string>
+
+    <string name="otherCategory">Other</string>
+    <string name="otherHint">Misc.</string>
+
 </resources>
