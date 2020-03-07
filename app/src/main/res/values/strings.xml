@@ -50,7 +50,7 @@
     <string name="insuranceCategory">Insurance</string>
     <string name="insuranceHint">Housing, Car, Health</string>
 
-    <string name="healthMedicalCategory">Health and Medical</string>
+    <string name="healthMedicalCategory">Health/Medical</string>
     <string name="healthMedicalHint">Medicine, Injuries, Sickness</string>
 
     <string name="otherCategory">Other</string>

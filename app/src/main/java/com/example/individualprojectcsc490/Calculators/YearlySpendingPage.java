@@ -35,6 +35,12 @@ public class YearlySpendingPage extends AppCompatActivity {
     private TextView insuranceFieldValue;
     private double insuranceValue;
 
+    private TextView healthMedicalFieldValue;
+    private double healthMedicalValue;
+
+    private TextView otherFieldValue;
+    private double otherValue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +81,8 @@ public class YearlySpendingPage extends AppCompatActivity {
         transportationFieldValue = (TextView) findViewById(R.id.transportationFieldValue);
         utilitiesFieldValue      = (TextView) findViewById(R.id.utilitiesFieldValue);
         insuranceFieldValue      = (TextView) findViewById(R.id.insuranceFieldValue);
+        healthMedicalFieldValue  = (TextView) findViewById(R.id.healthMedicalFieldValue);
+        otherFieldValue          = (TextView) findViewById(R.id.otherFieldValue);
     }
 
     //Sets up the drop-down Spinner container
@@ -92,8 +100,11 @@ public class YearlySpendingPage extends AppCompatActivity {
         transportationValue = Double.parseDouble(transportationFieldValue.getText().toString());
         utilitiesValue      = Double.parseDouble(utilitiesFieldValue.getText().toString());
         insuranceValue      = Double.parseDouble(insuranceFieldValue.getText().toString());
+        healthMedicalValue  = Double.parseDouble(healthMedicalFieldValue.getText().toString());
+        otherValue          = Double.parseDouble(otherFieldValue.getText().toString());
 
-        return foodValue + housingValue + transportationValue + utilitiesValue;
+        return foodValue + housingValue + transportationValue + utilitiesValue
+                         + insuranceValue + healthMedicalValue + otherValue;
     }
 
 }
