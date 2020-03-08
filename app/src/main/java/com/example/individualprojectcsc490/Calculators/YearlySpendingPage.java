@@ -62,8 +62,8 @@ public class YearlySpendingPage extends AppCompatActivity {
 
     //Sets up local variables
     private void setupUI() {
-        paymentPeriodSpinner     = (Spinner) findViewById(R.id.paymentPeriodSpinner);
-        compute                  = (Button) findViewById(R.id.computeButton);
+        paymentPeriodSpinner     = (Spinner) findViewById(R.id.paymentPeriodSpinnerSpending);
+        compute                  = (Button) findViewById(R.id.computeButtonSpending);
 
         yearlySpendingValue      = (TextView) findViewById(R.id.yearlySpendingValue);
         foodFieldValue           = (TextView) findViewById(R.id.foodFieldValue);

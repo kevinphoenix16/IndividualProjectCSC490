@@ -216,7 +216,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/computeButton"
+        android:id="@+id/computeButtonSpending"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/computeButton"
@@ -236,12 +236,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.68"
-        app:layout_constraintStart_toEndOf="@+id/computeButton"
+        app:layout_constraintStart_toEndOf="@+id/computeButtonSpending"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.935" />
 
     <Spinner
-        android:id="@+id/paymentPeriodSpinner"
+        android:id="@+id/paymentPeriodSpinnerSpending"
         android:layout_width="343dp"
         android:layout_height="41dp"
         app:layout_constraintBottom_toBottomOf="parent"

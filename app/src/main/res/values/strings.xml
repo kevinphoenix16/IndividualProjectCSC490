@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Individual Project CSC490</string>
 
+    //Generic Strings
+    <string name="computeButton">Compute</string>
+    <string name="initValue">0</string>
+
     //Home page
     <string name="homePage_title">FI/RE</string>
     <string name="calc_button">Calculators</string>
@@ -24,36 +28,39 @@
 
     //Savings Rate page
     <string name="savingsRatePage_title">Savings Rate</string>
+    <string name="savingsRateValue">Your Savings Rate</string>
+
+    <string name="incomeCategory">Income</string>
+    <string name="taxesCategory">Taxes</string>
+    <string name="spendingCategory">Spending</string>
+
+    <string name="incomeHint">Pre-tax Salary or Yearly Pay</string>
+    <string name="taxesHint">Taxes on your income</string>
+    <string name="spendingHint">Use Spending Calculator</string>
 
     //Yearly Spending page
     <string name="yearlySpendingPage_title">Yearly Spending</string>
-    <string name="computeButton">Compute</string>
     <string name="yearlySpendingValue">Your Yearly Spending</string>
-    <string name="initValue">0</string>
+
     <string-array name="paymentPeriodOptions">
         <item>Monthly</item>
         <item>Annually</item>
     </string-array>
 
     <string name="foodCategory">Food</string>
-    <string name="foodHint">Groceries, Dining</string>
-
     <string name="housingCategory">Housing</string>
-    <string name="housingHint">Rent, Mortgage</string>
-
     <string name="transportationCategory">Transportation</string>
-    <string name="transportationHint">Car, Gas, Travel</string>
-
     <string name="utilitiesCategory">Utilities</string>
-    <string name="utilitiesHint">Water, Gas, Electric</string>
-
     <string name="insuranceCategory">Insurance</string>
-    <string name="insuranceHint">Housing, Car, Health</string>
-
     <string name="healthMedicalCategory">Health/Medical</string>
-    <string name="healthMedicalHint">Medicine, Injuries, Sickness</string>
-
     <string name="otherCategory">Other</string>
+
+    <string name="foodHint">Groceries, Dining</string>
+    <string name="housingHint">Rent, Mortgage</string>
+    <string name="transportationHint">Car, Gas, Travel</string>
+    <string name="utilitiesHint">Water, Gas, Electric</string>
+    <string name="insuranceHint">Housing, Car, Health</string>
+    <string name="healthMedicalHint">Medicine, Injuries, Sickness</string>
     <string name="otherHint">Misc.</string>
 
 </resources>
