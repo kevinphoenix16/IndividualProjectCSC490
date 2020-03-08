@@ -18,27 +18,22 @@ public class YearlySpendingPage extends AppCompatActivity {
 
     private Spinner paymentPeriodSpinner;
     private Button compute;
+
     private TextView yearlySpendingValue;
-
     private TextView foodFieldValue;
-    private double foodValue;
-
     private TextView housingFieldValue;
-    private double housingValue;
-
     private TextView transportationFieldValue;
-    private double transportationValue;
-
     private TextView utilitiesFieldValue;
-    private double utilitiesValue;
-
     private TextView insuranceFieldValue;
-    private double insuranceValue;
-
     private TextView healthMedicalFieldValue;
-    private double healthMedicalValue;
-
     private TextView otherFieldValue;
+
+    private double foodValue;
+    private double housingValue;
+    private double transportationValue;
+    private double utilitiesValue;
+    private double insuranceValue;
+    private double healthMedicalValue;
     private double otherValue;
 
     @Override
@@ -53,11 +48,6 @@ public class YearlySpendingPage extends AppCompatActivity {
         compute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /* TO-DO:
-                 * InProgress - Get all values from text fields
-                 * Combine all values with multiplier
-                 * Done - Update yearlySpendingValue
-                 */
                 double subTotal = sumCategories();
                 String paymentPeriod = paymentPeriodSpinner.getSelectedItem().toString();
 
@@ -74,8 +64,8 @@ public class YearlySpendingPage extends AppCompatActivity {
     private void setupUI() {
         paymentPeriodSpinner     = (Spinner) findViewById(R.id.paymentPeriodSpinner);
         compute                  = (Button) findViewById(R.id.computeButton);
-        yearlySpendingValue      = (TextView) findViewById(R.id.yearlySpendingValue);
 
+        yearlySpendingValue      = (TextView) findViewById(R.id.yearlySpendingValue);
         foodFieldValue           = (TextView) findViewById(R.id.foodFieldValue);
         housingFieldValue        = (TextView) findViewById(R.id.housingFieldValue);
         transportationFieldValue = (TextView) findViewById(R.id.transportationFieldValue);
