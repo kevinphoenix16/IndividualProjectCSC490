@@ -38,6 +38,9 @@
     <string name="annualReturnHint">Investments Return</string>
     <string name="withdrawalRateHint">Investments Withdrawn</string>
 
+    <string name="returnValue">5</string>
+    <string name="withdrawalValue">4</string>
+
     //Savings Rate page
     <string name="savingsRatePage_title">Savings Rate</string>
     <string name="savingsRateValue">Your Savings Rate</string>

@@ -44,10 +44,10 @@
         android:text="@string/computeButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
+        app:layout_constraintVertical_bias="0.878" />
 
     <TextView
         android:id="@+id/withdrawalRateCategroy"
@@ -64,12 +64,12 @@
 
     <EditText
         android:id="@+id/withdrawalRateFieldValue"
-        android:layout_width="201dp"
-        android:layout_height="42dp"
+        android:layout_width="188dp"
+        android:layout_height="43dp"
         android:ems="10"
         android:hint="@string/withdrawalRateHint"
         android:inputType="number|numberDecimal"
-        android:text="@string/initValue"
+        android:text="@string/withdrawalValue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.919"
@@ -92,12 +92,12 @@
 
     <EditText
         android:id="@+id/annualReturnFieldValue"
-        android:layout_width="201dp"
-        android:layout_height="44dp"
+        android:layout_width="191dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:hint="@string/annualReturnHint"
         android:inputType="number|numberDecimal"
-        android:text="@string/initValue"
+        android:text="@string/returnValue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.919"
@@ -120,18 +120,18 @@
 
     <EditText
         android:id="@+id/portfolioFieldValue"
-        android:layout_width="201dp"
-        android:layout_height="42dp"
+        android:layout_width="191dp"
+        android:layout_height="41dp"
         android:ems="10"
         android:hint="@string/portfolioHint"
         android:inputType="number|numberDecimal"
         android:text="@string/initValue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHorizontal_bias="0.922"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/incomeFieldValue"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.081" />
 
     <TextView
         android:id="@+id/incomeCategroy"
@@ -148,8 +148,8 @@
 
     <EditText
         android:id="@+id/incomeFieldValue"
-        android:layout_width="200dp"
-        android:layout_height="44dp"
+        android:layout_width="189dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:hint="@string/incomeHint"
         android:inputType="number|numberDecimal"
@@ -163,8 +163,8 @@
 
     <EditText
         android:id="@+id/savingsRateFieldValue"
-        android:layout_width="200dp"
-        android:layout_height="45dp"
+        android:layout_width="188dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:hint="@string/savingsRateHint"
         android:inputType="number|numberDecimal"
