@@ -60,6 +60,7 @@
     <string-array name="paymentPeriodOptions">
         <item>Monthly</item>
         <item>Annually</item>
+        <item>Weekly</item>
     </string-array>
 
     <string name="foodCategory">Food</string>

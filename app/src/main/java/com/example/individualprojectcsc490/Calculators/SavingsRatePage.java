@@ -15,6 +15,7 @@ import java.text.DecimalFormat;
 public class SavingsRatePage extends AppCompatActivity {
 
     private Button compute;
+    private DecimalFormat numberFormat;
 
     private TextView savingsRateFieldValue;
     private TextView incomeFieldValue;
@@ -37,7 +38,7 @@ public class SavingsRatePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 savingsRate = computeSavingsRate();
-                DecimalFormat numberFormat = new DecimalFormat("#.00%");
+                numberFormat = new DecimalFormat("#,##0.00%");
 
                 if(savingsRate >= 0){
                     savingsRateFieldValue.setText(numberFormat.format(savingsRate));

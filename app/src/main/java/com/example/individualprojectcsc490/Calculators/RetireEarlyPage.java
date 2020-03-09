@@ -82,7 +82,7 @@ public class RetireEarlyPage extends AppCompatActivity {
 
         double yearsToRetire = numerator/denominator;
 
-        numberFormat = new DecimalFormat("#,###.00 Years");
+        numberFormat = new DecimalFormat("#,##0.00 Years");
         yearsToRetireFieldValue.setText(numberFormat.format(yearsToRetire));
     }
 
@@ -90,7 +90,7 @@ public class RetireEarlyPage extends AppCompatActivity {
     private void computeNetWorthField() {
         netWorth = incomeValue * (1.00 - (savingsRateValue)) * 25;
 
-        numberFormat = new DecimalFormat("$#,###.00");
+        numberFormat = new DecimalFormat("$#,##0.00");
         netWorthFieldValue.setText(numberFormat.format(netWorth));
     }
 }

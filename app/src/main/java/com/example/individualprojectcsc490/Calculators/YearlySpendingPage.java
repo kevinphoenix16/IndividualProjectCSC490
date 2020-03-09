@@ -11,13 +11,17 @@ import android.widget.TextView;
 
 import com.example.individualprojectcsc490.R;
 
+import java.text.DecimalFormat;
+
 public class YearlySpendingPage extends AppCompatActivity {
 
     private final int ANNUALLY = 1;
     private final int MONTHLY = 12;
+    private final int WEEKLY = 52;
 
     private Spinner paymentPeriodSpinner;
     private Button compute;
+    private DecimalFormat numberFormat;
 
     private TextView yearlySpendingValue;
     private TextView foodFieldValue;
@@ -51,10 +55,13 @@ public class YearlySpendingPage extends AppCompatActivity {
                 double subTotal = sumCategories();
                 String paymentPeriod = paymentPeriodSpinner.getSelectedItem().toString();
 
+                numberFormat = new DecimalFormat("$#,##0.00");
                 if(paymentPeriod.equals("Monthly")){
-                    yearlySpendingValue.setText(Double.toString(subTotal * MONTHLY));
+                    yearlySpendingValue.setText(numberFormat.format(subTotal * MONTHLY));
                 } else if(paymentPeriod.equals("Annually")) {
-                    yearlySpendingValue.setText(Double.toString(subTotal * ANNUALLY));
+                    yearlySpendingValue.setText(numberFormat.format(subTotal * ANNUALLY));
+                } else if(paymentPeriod.equals("Weekly")) {
+                    yearlySpendingValue.setText(numberFormat.format(subTotal * WEEKLY));
                 }
             }
         });
