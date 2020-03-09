@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.individualprojectcsc490.R;
 
-public class FIRENumberPage extends AppCompatActivity {
+public class RetireEarlyPage extends AppCompatActivity {
 
     private Button compute;
 
@@ -32,20 +32,10 @@ public class FIRENumberPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_firenumber_page);
+        setContentView(R.layout.activity_retire_early);
 
         initUI();
 
-        compute.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setValues();
-
-                computeYearsToRetireField();
-
-                computeNetWorthField();
-            }
-        });
     }
 
     //Sets up local variables

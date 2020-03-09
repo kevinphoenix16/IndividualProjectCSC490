@@ -11,7 +11,7 @@ import com.example.individualprojectcsc490.Calculators.*;
 
 public class CalculatorsPage extends AppCompatActivity {
 
-    private Button FIRENumberButton;
+    private Button retireEarlyButton;
     private Button savingsRateButton;
     private Button yearlySpendingButton;
 
@@ -20,12 +20,12 @@ public class CalculatorsPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculators_page);
 
-        //FIRENumber Button
-        FIRENumberButton = (Button) findViewById(R.id.FIRENumberButton);
-        FIRENumberButton.setOnClickListener(new View.OnClickListener() {
+        //RetireEarly Button
+        retireEarlyButton = (Button) findViewById(R.id.retireEarlyButton);
+        retireEarlyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openFIRENumberPage();
+                openRetireEarlyPage();
             }
         });
 
@@ -49,8 +49,8 @@ public class CalculatorsPage extends AppCompatActivity {
     }
 
     //Switches to FIRENumberPage Activity
-    public void openFIRENumberPage(){
-        Intent intent = new Intent(this, FIRENumberPage.class);
+    public void openRetireEarlyPage(){
+        Intent intent = new Intent(this, RetireEarlyPage.class);
         startActivity(intent);
     }
 

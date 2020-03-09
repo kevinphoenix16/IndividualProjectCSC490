@@ -13,7 +13,7 @@
 
     //Calculator page
     <string name="calcPage_title">FI/RE Calculators</string>
-    <string name="FIRE_button">FI/RE Number Calculator</string>
+    <string name="retireEarlyButton">Retire Early Calculator</string>
     <string name="saveRate_button">Savings Rate Calculator</string>
     <string name="spendRate_button">Yearly Spending Calculator</string>
 
