@@ -2,6 +2,7 @@ package com.example.individualprojectcsc490.Calculators;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -11,12 +12,10 @@ import android.widget.TextView;
 
 import com.example.individualprojectcsc490.R;
 
+import java.text.DecimalFormat;
+
 public class SavingsRatePage extends AppCompatActivity {
 
-    private final int ANNUALLY = 1;
-    private final int MONTHLY = 12;
-
-    private Spinner paymentPeriodSpinnerSavings;
     private Button compute;
 
     private TextView savingsRateFieldValue;
@@ -24,6 +23,7 @@ public class SavingsRatePage extends AppCompatActivity {
     private TextView taxesFieldValue;
     private TextView spendingFieldValue;
 
+    private double savingsRate;
     private double incomeValue;
     private double taxesValue;
     private double spendingValue;
@@ -34,19 +34,19 @@ public class SavingsRatePage extends AppCompatActivity {
         setContentView(R.layout.activity_savings_rate_page);
 
         initUI();
-        setupSpinner();
 
         compute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                savingsRate = computeSavingsRate();
+                DecimalFormat numberFormat = new DecimalFormat("#.00%");
 
-
-                String paymentPeriod = paymentPeriodSpinnerSavings.getSelectedItem().toString();
-
-                if(paymentPeriod.equals("Monthly")){
-                    //based off monthly values
-                } else if(paymentPeriod.equals("Annually")) {
-                    //based off yearly values
+                if(savingsRate >= 0){
+                    savingsRateFieldValue.setText(numberFormat.format(savingsRate));
+                    savingsRateFieldValue.setTextColor(Color.GREEN);
+                } else {
+                    savingsRateFieldValue.setText(numberFormat.format(savingsRate));
+                    savingsRateFieldValue.setTextColor(Color.RED);
                 }
             }
         });
@@ -54,7 +54,6 @@ public class SavingsRatePage extends AppCompatActivity {
 
     //Sets up local variables
     private void initUI() {
-        paymentPeriodSpinnerSavings = (Spinner) findViewById(R.id.paymentPeriodSpinnerSavings);
         compute                     = (Button) findViewById(R.id.computeButtonSaving);
 
         savingsRateFieldValue       = (TextView) findViewById(R.id.savingsRateFieldValue);
@@ -63,11 +62,13 @@ public class SavingsRatePage extends AppCompatActivity {
         spendingFieldValue          = (TextView) findViewById(R.id.spendingFieldValue);
     }
 
-    //Sets up the drop-down Spinner container
-    private void setupSpinner() {
-        ArrayAdapter<String> paymentPeriodAdapter = new ArrayAdapter<String>(SavingsRatePage.this,
-                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.paymentPeriodOptions));
-        paymentPeriodAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        paymentPeriodSpinnerSavings.setAdapter(paymentPeriodAdapter);
+
+    //Gets values from TextViews and returns the savings rate
+    private Double computeSavingsRate() {
+        incomeValue   = Double.parseDouble(incomeFieldValue.getText().toString());
+        taxesValue    = Double.parseDouble(taxesFieldValue.getText().toString());
+        spendingValue = Double.parseDouble(spendingFieldValue.getText().toString());
+
+        return ((incomeValue-taxesValue)-spendingValue)/(incomeValue-taxesValue);
     }
 }
