@@ -12,7 +12,6 @@
         <activity android:name=".Calculators.RetireEarlyPage"></activity>
         <activity android:name=".Calculators.YearlySpendingPage" />
         <activity android:name=".Calculators.SavingsRatePage" />
-        <activity android:name=".Calculators.FIRENumberPage" />
         <activity android:name=".ReferencesPage" />
         <activity android:name=".BudgetingPage" />
         <activity android:name=".CalculatorsPage" />
