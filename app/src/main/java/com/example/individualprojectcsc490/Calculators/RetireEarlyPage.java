@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.individualprojectcsc490.R;
 
@@ -63,30 +64,33 @@ public class RetireEarlyPage extends AppCompatActivity {
 
     //Sets the values of Doubles from the TextViews once the compute button is pressed
     private void setValues() {
-        savingsRateValue    = Double.parseDouble(savingsRateFieldValue.getText().toString());
+        savingsRateValue    = Double.parseDouble(savingsRateFieldValue.getText().toString()) / 100;
         incomeValue         = Double.parseDouble(incomeFieldValue.getText().toString());
         portfolioValue      = Double.parseDouble(portfolioFieldValue.getText().toString());
-        annualReturnValue   = Double.parseDouble(annualReturnFieldValue.getText().toString());
-        withdrawalRateValue = Double.parseDouble(withdrawalRateFieldValue.getText().toString());
+        annualReturnValue   = Double.parseDouble(annualReturnFieldValue.getText().toString()) / 100;
+        withdrawalRateValue = Double.parseDouble(withdrawalRateFieldValue.getText().toString()) / 100;
     }
 
     //Calculates Years to Retire
+    //Source of formula: https://networthify.com/calculator/earlyretirement
     private void computeYearsToRetireField() {
-        double yearsToRetire = 0;           //portfolioValue + annualReturnValue + withdrawalRateValue + netWorth;
+        double numberatorPart1 = ((annualReturnValue * (1 - savingsRateValue) * incomeValue) / withdrawalRateValue) + (savingsRateValue * incomeValue);
+        double numberatorPart2 = (annualReturnValue * portfolioValue) + (savingsRateValue * incomeValue);
 
+        double numerator = Math.log10(numberatorPart1 / numberatorPart2);
+        double denominator = Math.log10(1 + annualReturnValue);
 
+        double yearsToRetire = numerator/denominator;
 
-
-        numberFormat = new DecimalFormat("#.00 Years");
+        numberFormat = new DecimalFormat("#,###.00 Years");
         yearsToRetireFieldValue.setText(numberFormat.format(yearsToRetire));
     }
 
     //Calculates Net Worth at Retirement
     private void computeNetWorthField() {
-        netWorth = incomeValue * (1.00 - (savingsRateValue)/100) * 25;
-
-
-        numberFormat = new DecimalFormat("$###,###.00");
+        netWorth = incomeValue * (1.00 - (savingsRateValue)) * 25;
+        
+        numberFormat = new DecimalFormat("$#,###.00");
         netWorthFieldValue.setText(numberFormat.format(netWorth));
     }
 }
