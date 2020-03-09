@@ -89,7 +89,7 @@ public class RetireEarlyPage extends AppCompatActivity {
     //Calculates Net Worth at Retirement
     private void computeNetWorthField() {
         netWorth = incomeValue * (1.00 - (savingsRateValue)) * 25;
-        
+
         numberFormat = new DecimalFormat("$#,###.00");
         netWorthFieldValue.setText(numberFormat.format(netWorth));
     }
