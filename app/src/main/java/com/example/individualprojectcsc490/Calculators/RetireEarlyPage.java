@@ -9,9 +9,12 @@ import android.widget.TextView;
 
 import com.example.individualprojectcsc490.R;
 
+import java.text.DecimalFormat;
+
 public class RetireEarlyPage extends AppCompatActivity {
 
     private Button compute;
+    private DecimalFormat numberFormat;
 
     private TextView savingsRateFieldValue;
     private TextView incomeFieldValue;
@@ -26,7 +29,6 @@ public class RetireEarlyPage extends AppCompatActivity {
     private double portfolioValue;
     private double annualReturnValue;
     private double withdrawalRateValue;
-    private double yearsToRetire;
     private double netWorth;
 
     @Override
@@ -36,11 +38,19 @@ public class RetireEarlyPage extends AppCompatActivity {
 
         initUI();
 
+        compute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setValues();
+                computeYearsToRetireField();
+                computeNetWorthField();
+            }
+        });
     }
 
     //Sets up local variables
     private void initUI() {
-        compute                  = (Button) findViewById(R.id.computeButtonSaving);
+        compute                  = (Button) findViewById(R.id.computeButtonRetire);
 
         savingsRateFieldValue    = (TextView) findViewById(R.id.savingsRateFieldValue);
         incomeFieldValue         = (TextView) findViewById(R.id.incomeFieldValue);
@@ -62,15 +72,21 @@ public class RetireEarlyPage extends AppCompatActivity {
 
     //Calculates Years to Retire
     private void computeYearsToRetireField() {
-        yearsToRetire = portfolioValue + annualReturnValue + withdrawalRateValue + netWorth;
+        double yearsToRetire = 0;           //portfolioValue + annualReturnValue + withdrawalRateValue + netWorth;
 
-        yearsToRetireFieldValue.setText(Double.toString(yearsToRetire));
+
+
+
+        numberFormat = new DecimalFormat("#.00 Years");
+        yearsToRetireFieldValue.setText(numberFormat.format(yearsToRetire));
     }
 
     //Calculates Net Worth at Retirement
     private void computeNetWorthField() {
-        netWorth = incomeValue * (1.00 - (savingsRateValue)/100);
+        netWorth = incomeValue * (1.00 - (savingsRateValue)/100) * 25;
 
-        netWorthFieldValue.setText(Double.toString(netWorth));
+
+        numberFormat = new DecimalFormat("$###,###.00");
+        netWorthFieldValue.setText(numberFormat.format(netWorth));
     }
 }

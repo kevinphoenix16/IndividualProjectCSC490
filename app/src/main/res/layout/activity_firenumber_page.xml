@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/computeButtonFIRE"
+        app:layout_constraintStart_toEndOf="@+id/computeButtonRetire"
         app:layout_constraintTop_toBottomOf="@+id/yearsToRetireFieldValue"
         app:layout_constraintVertical_bias="0.43" />
 
@@ -33,12 +33,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/computeButtonFIRE"
+        app:layout_constraintStart_toEndOf="@+id/computeButtonRetire"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.831" />
 
     <Button
-        android:id="@+id/computeButtonFIRE"
+        android:id="@+id/computeButtonRetire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/computeButton"
