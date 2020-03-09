@@ -8,6 +8,188 @@
     tools:context=".Calculators.FIRENumberPage">
 
     <TextView
+        android:id="@+id/netWorthFieldValue"
+        android:layout_width="218dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/netWorthValue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/computeButtonFIRE"
+        app:layout_constraintTop_toBottomOf="@+id/yearsToRetireFieldValue"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <TextView
+        android:id="@+id/yearsToRetireFieldValue"
+        android:layout_width="218dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/yearsToRetireValue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/computeButtonFIRE"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831" />
+
+    <Button
+        android:id="@+id/computeButtonFIRE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/computeButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934" />
+
+    <TextView
+        android:id="@+id/withdrawalRateCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/withdrawalRateCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/withdrawalRateFieldValue"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/withdrawalRateFieldValue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/withdrawalRateFieldValue"
+        android:layout_width="201dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="@string/withdrawalRateHint"
+        android:inputType="number|numberDecimal"
+        android:text="@string/initValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/annualReturnFieldValue"
+        app:layout_constraintVertical_bias="0.131" />
+
+    <TextView
+        android:id="@+id/annualReturnCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/annualReturnCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/annualReturnFieldValue"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/annualReturnFieldValue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/annualReturnFieldValue"
+        android:layout_width="201dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:hint="@string/annualReturnHint"
+        android:inputType="number|numberDecimal"
+        android:text="@string/initValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/portfolioFieldValue"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <TextView
+        android:id="@+id/portfolioCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/portfolioCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/portfolioFieldValue"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/portfolioFieldValue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/portfolioFieldValue"
+        android:layout_width="201dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="@string/portfolioHint"
+        android:inputType="number|numberDecimal"
+        android:text="@string/initValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incomeFieldValue"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <TextView
+        android:id="@+id/incomeCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/incomeCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/incomeFieldValue"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/incomeFieldValue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/incomeFieldValue"
+        android:layout_width="200dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:hint="@string/incomeHint"
+        android:inputType="number|numberDecimal"
+        android:text="@string/initValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/savingsRateFieldValue"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <EditText
+        android:id="@+id/savingsRateFieldValue"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="@string/savingsRateHint"
+        android:inputType="number|numberDecimal"
+        android:text="@string/initValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.249" />
+
+    <TextView
+        android:id="@+id/savingsRateCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/savingsRateCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/savingsRateFieldValue"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/savingsRateFieldValue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
         android:id="@+id/FIRENumberPageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

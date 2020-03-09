@@ -25,6 +25,18 @@
 
     //FI/RE Number page
     <string name="FIRENumberPage_title">FI/RE Number</string>
+    <string name="yearsToRetireValue">Years to Retire</string>
+    <string name="netWorthValue">Net Worth at Retirement</string>
+
+    <string name="savingsRateCategory">Savings Rate</string>
+    <string name="portfolioCategory">Portfolio</string>
+    <string name="annualReturnCategory">Annual Return</string>
+    <string name="withdrawalRateCategory">Withdrawal Rate</string>
+
+    <string name="savingsRateHint">From Savings Rate Calculator</string>
+    <string name="portfolioHint">Amount Invested</string>
+    <string name="annualReturnHint">Investments Return</string>
+    <string name="withdrawalRateHint">Investments Withdrawn</string>
 
     //Savings Rate page
     <string name="savingsRatePage_title">Savings Rate</string>
