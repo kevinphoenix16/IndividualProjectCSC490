@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/otherFieldValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="185dp"
+        android:layout_height="42dp"
         android:ems="10"
         android:hint="@string/otherHint"
         android:inputType="number|numberDecimal"
@@ -50,8 +50,8 @@
 
     <EditText
         android:id="@+id/healthMedicalFieldValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="185dp"
+        android:layout_height="43dp"
         android:ems="10"
         android:hint="@string/healthMedicalHint"
         android:inputType="number|numberDecimal"
@@ -78,8 +78,8 @@
 
     <EditText
         android:id="@+id/insuranceFieldValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="184dp"
+        android:layout_height="43dp"
         android:ems="10"
         android:hint="@string/insuranceHint"
         android:inputType="number|numberDecimal"
@@ -106,23 +106,23 @@
 
     <EditText
         android:id="@+id/utilitiesFieldValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="186dp"
+        android:layout_height="43dp"
         android:ems="10"
         android:hint="@string/utilitiesHint"
         android:inputType="number|numberDecimal"
         android:text="@string/initValue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/transportationFieldValue"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.035" />
 
     <EditText
         android:id="@+id/transportationFieldValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="184dp"
+        android:layout_height="43dp"
         android:ems="10"
         android:hint="@string/transportationHint"
         android:inputType="number|numberDecimal"
@@ -149,8 +149,8 @@
 
     <EditText
         android:id="@+id/housingFieldValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="184dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:hint="@string/housingHint"
         android:inputType="number|numberDecimal"
@@ -189,8 +189,8 @@
 
     <EditText
         android:id="@+id/foodFieldValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="183dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:hint="@string/foodHint"
         android:inputType="number|numberDecimal"

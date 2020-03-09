@@ -63,16 +63,6 @@
         app:layout_constraintTop_toBottomOf="@+id/incomeFieldValue"
         app:layout_constraintVertical_bias="0.114" />
 
-    <Spinner
-        android:id="@+id/paymentPeriodSpinnerSavings"
-        android:layout_width="343dp"
-        android:layout_height="41dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.159" />
-
     <EditText
         android:id="@+id/incomeFieldValue"
         android:layout_width="wrap_content"
