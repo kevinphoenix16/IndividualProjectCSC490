@@ -27,6 +27,36 @@
     <string name="VideosButton">Videos</string>
     <string name="ToolsButton">Tools</string>
 
+    <string-array name="books">
+        <item>Book 1</item>
+        <item>Book 2</item>
+        <item>Book 1</item>
+        <item>Book 2</item>
+        <item>Book 1</item>
+        <item>Book 2</item>
+        <item>Book 1</item>
+        <item>Book 2</item>
+        <item>Book 1</item>
+        <item>Book 2</item>
+        <item>Book 1</item>
+        <item>Book 2</item>
+    </string-array>
+
+    <string-array name="blogs">
+        <item>blog 1</item>
+        <item>blog 2</item>
+    </string-array>
+
+    <string-array name="videos">
+        <item>Video 1</item>
+        <item>Video 2</item>
+    </string-array>
+
+    <string-array name="tools">
+        <item>tool 1</item>
+        <item>tool 2</item>
+    </string-array>
+
     //FI/RE Number page
     <string name="FIRENumberPage_title">FI/RE Number</string>
     <string name="yearsToRetireValue">Years to Retire</string>

@@ -85,7 +85,7 @@ public class YearlySpendingPage extends AppCompatActivity {
     //Sets up the drop-down Spinner container
     private void setupSpinner() {
         ArrayAdapter<String> paymentPeriodAdapter = new ArrayAdapter<String>(YearlySpendingPage.this,
-                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.paymentPeriodOptions));
+                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.books));
         paymentPeriodAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         paymentPeriodSpinner.setAdapter(paymentPeriodAdapter);
     }
