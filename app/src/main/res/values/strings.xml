@@ -22,6 +22,10 @@
 
     //Reference page
     <string name="refPage_title">References</string>
+    <string name="booksButton">Books</string>
+    <string name="blogsButton">Blogs</string>
+    <string name="VideosButton">Videos</string>
+    <string name="ToolsButton">Tools</string>
 
     //FI/RE Number page
     <string name="FIRENumberPage_title">FI/RE Number</string>
