@@ -2,18 +2,11 @@ package com.example.individualprojectcsc490;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class ReferencesPage extends AppCompatActivity {
 
@@ -60,8 +53,7 @@ public class ReferencesPage extends AppCompatActivity {
             }
         });
     }
-
-
+    
     private void initUI() {
         booksButton    = findViewById(R.id.booksButton);
         blogsButton    = findViewById(R.id.blogsButton);
