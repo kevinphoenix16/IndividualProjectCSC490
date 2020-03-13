@@ -19,9 +19,9 @@
 
     //Budgeting page
     <string name="budgetPage_title">Budget Creator</string>
-    <string name="budgetingPageHelp">Enter in percentages for each field.</string>
+    <string name="budgetingPageHelp">Enter in percentages for each field</string>
     <string name="createBudgetButton">Create Budget</string>
-    <string name="percentageSumText">Current %:</string>
+    <string name="percentageSumText">% Used:</string>
 
     <string name="foodValue">10</string>
     <string name="housingValue">25</string>
