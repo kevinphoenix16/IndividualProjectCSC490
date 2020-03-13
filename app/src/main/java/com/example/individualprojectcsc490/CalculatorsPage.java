@@ -2,6 +2,7 @@ package com.example.individualprojectcsc490;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,49 +21,37 @@ public class CalculatorsPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculators_page);
 
+        initUI();
+
         //RetireEarly Button
-        retireEarlyButton = (Button) findViewById(R.id.retireEarlyButton);
-        retireEarlyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openRetireEarlyPage();
-            }
-        });
+        changeActivity(retireEarlyButton, RetireEarlyPage.class);
 
         //SavingsRate Button
-        savingsRateButton = (Button) findViewById(R.id.savingsRateButton);
-        savingsRateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSavingsRatePage();
-            }
-        });
+        changeActivity(savingsRateButton, SavingsRatePage.class);
 
         //YearlySpending Button
-        yearlySpendingButton = (Button) findViewById(R.id.yearlySpendingButton);
-        yearlySpendingButton.setOnClickListener(new View.OnClickListener() {
+        changeActivity(yearlySpendingButton, YearlySpendingPage.class);
+    }
+
+    //Sets local fields
+    private void initUI() {
+        retireEarlyButton    = findViewById(R.id.retireEarlyButton);
+        savingsRateButton    = findViewById(R.id.savingsRateButton);
+        yearlySpendingButton = findViewById(R.id.yearlySpendingButton);
+    }
+
+    /**
+     *
+     * @param button - button that is clicked on Main Page
+     * @param page - the new activity to change to
+     */
+    private void changeActivity(Button button, final Class<? extends Activity> page){
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openYearlySpendingPage();
+                Intent intent = new Intent(getBaseContext(), page);
+                startActivity(intent);
             }
         });
-    }
-
-    //Switches to FIRENumberPage Activity
-    public void openRetireEarlyPage(){
-        Intent intent = new Intent(this, RetireEarlyPage.class);
-        startActivity(intent);
-    }
-
-    //Switches to SavingsRatePage Activity
-    public void openSavingsRatePage(){
-        Intent intent = new Intent(this, SavingsRatePage.class);
-        startActivity(intent);
-    }
-
-    //Switches to YearlySpendingPage Activity
-    public void openYearlySpendingPage(){
-        Intent intent = new Intent(this, YearlySpendingPage.class);
-        startActivity(intent);
     }
 }
