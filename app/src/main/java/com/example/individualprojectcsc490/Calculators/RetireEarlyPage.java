@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.individualprojectcsc490.R;
 
@@ -51,15 +50,15 @@ public class RetireEarlyPage extends AppCompatActivity {
 
     //Sets up local variables
     private void initUI() {
-        compute                  = (Button) findViewById(R.id.computeButtonRetire);
+        compute                  = findViewById(R.id.computeButtonRetire);
 
-        savingsRateFieldValue    = (TextView) findViewById(R.id.savingsRateFieldValue);
-        incomeFieldValue         = (TextView) findViewById(R.id.incomeFieldValue);
-        portfolioFieldValue      = (TextView) findViewById(R.id.portfolioFieldValue);
-        annualReturnFieldValue   = (TextView) findViewById(R.id.annualReturnFieldValue);
-        withdrawalRateFieldValue = (TextView) findViewById(R.id.withdrawalRateFieldValue);
-        yearsToRetireFieldValue  = (TextView) findViewById(R.id.yearsToRetireFieldValue);
-        netWorthFieldValue       = (TextView) findViewById(R.id.netWorthFieldValue);
+        savingsRateFieldValue    = findViewById(R.id.savingsRateFieldValue);
+        incomeFieldValue         = findViewById(R.id.incomeFieldValue);
+        portfolioFieldValue      = findViewById(R.id.portfolioFieldValue);
+        annualReturnFieldValue   = findViewById(R.id.annualReturnFieldValue);
+        withdrawalRateFieldValue = findViewById(R.id.withdrawalRateFieldValue);
+        yearsToRetireFieldValue  = findViewById(R.id.yearsToRetireFieldValue);
+        netWorthFieldValue       = findViewById(R.id.netWorthFieldValue);
     }
 
     //Sets the values of Doubles from the TextViews once the compute button is pressed
@@ -74,10 +73,10 @@ public class RetireEarlyPage extends AppCompatActivity {
     //Calculates Years to Retire
     //Source of formula: https://networthify.com/calculator/earlyretirement
     private void computeYearsToRetireField() {
-        double numberatorPart1 = ((annualReturnValue * (1 - savingsRateValue) * incomeValue) / withdrawalRateValue) + (savingsRateValue * incomeValue);
-        double numberatorPart2 = (annualReturnValue * portfolioValue) + (savingsRateValue * incomeValue);
+        double numeratorPart1 = ((annualReturnValue * (1 - savingsRateValue) * incomeValue) / withdrawalRateValue) + (savingsRateValue * incomeValue);
+        double numeratorPart2 = (annualReturnValue * portfolioValue) + (savingsRateValue * incomeValue);
 
-        double numerator = Math.log10(numberatorPart1 / numberatorPart2);
+        double numerator = Math.log10(numeratorPart1 / numeratorPart2);
         double denominator = Math.log10(1 + annualReturnValue);
 
         double yearsToRetire = numerator/denominator;

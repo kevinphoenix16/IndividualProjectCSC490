@@ -53,14 +53,13 @@ public class SavingsRatePage extends AppCompatActivity {
 
     //Sets up local variables
     private void initUI() {
-        compute               = (Button) findViewById(R.id.computeButtonSaving);
+        compute               = findViewById(R.id.computeButtonSaving);
 
-        savingsRateFieldValue = (TextView) findViewById(R.id.savingsRateFieldValue);
-        incomeFieldValue      = (TextView) findViewById(R.id.incomeFieldValue);
-        taxesFieldValue       = (TextView) findViewById(R.id.taxesFieldValue);
-        spendingFieldValue    = (TextView) findViewById(R.id.spendingFieldValue);
+        savingsRateFieldValue = findViewById(R.id.savingsRateFieldValue);
+        incomeFieldValue      = findViewById(R.id.incomeFieldValue);
+        taxesFieldValue       = findViewById(R.id.taxesFieldValue);
+        spendingFieldValue    = findViewById(R.id.spendingFieldValue);
     }
-
 
     //Gets values from TextViews and returns the savings rate
     private Double computeSavingsRate() {
