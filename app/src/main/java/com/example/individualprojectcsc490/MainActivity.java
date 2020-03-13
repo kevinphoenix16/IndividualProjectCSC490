@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
      * @param button - button that is clicked on Main Page
      * @param page - the new activity to change to
      */
-    private void changeActivity(Button button, final Class<? extends Activity> page){
+    private void changeActivity(Button button, final Class<? extends Activity> page) {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

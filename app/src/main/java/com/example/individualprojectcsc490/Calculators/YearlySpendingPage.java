@@ -59,27 +59,6 @@ public class YearlySpendingPage extends AppCompatActivity {
         });
     }
 
-    /**
-     *
-     * @param paymentPeriod - period selected from spinner
-     * @param subTotal - total of fields before the period multiplier is applied
-     */
-    private void setSpendingValue(String paymentPeriod, double subTotal) {
-        numberFormat = new DecimalFormat("$#,##0.00");
-
-        switch (paymentPeriod) {
-            case "Monthly":
-                yearlySpendingValue.setText(numberFormat.format(subTotal * MONTHLY));
-                break;
-            case "Annually":
-                yearlySpendingValue.setText(numberFormat.format(subTotal * ANNUALLY));
-                break;
-            case "Weekly":
-                yearlySpendingValue.setText(numberFormat.format(subTotal * WEEKLY));
-                break;
-        }
-    }
-
     //Sets up local variables
     private void setupUI() {
         paymentPeriodSpinner     = findViewById(R.id.paymentPeriodSpinnerSpending);
@@ -104,7 +83,7 @@ public class YearlySpendingPage extends AppCompatActivity {
     }
 
     //Adds up all categories of spending
-    private double sumCategories(){
+    private double sumCategories() {
         foodValue           = Double.parseDouble(foodFieldValue.getText().toString());
         housingValue        = Double.parseDouble(housingFieldValue.getText().toString());
         transportationValue = Double.parseDouble(transportationFieldValue.getText().toString());
@@ -115,6 +94,27 @@ public class YearlySpendingPage extends AppCompatActivity {
 
         return foodValue + housingValue + transportationValue + utilitiesValue
                          + insuranceValue + healthMedicalValue + otherValue;
+    }
+
+    /**
+     *
+     * @param paymentPeriod - period selected from spinner
+     * @param subTotal - total of fields before the period multiplier is applied
+     */
+    private void setSpendingValue(String paymentPeriod, double subTotal) {
+        numberFormat = new DecimalFormat("$#,##0.00");
+
+        switch (paymentPeriod) {
+            case "Monthly":
+                yearlySpendingValue.setText(numberFormat.format(subTotal * MONTHLY));
+                break;
+            case "Annually":
+                yearlySpendingValue.setText(numberFormat.format(subTotal * ANNUALLY));
+                break;
+            case "Weekly":
+                yearlySpendingValue.setText(numberFormat.format(subTotal * WEEKLY));
+                break;
+        }
     }
 
 }
