@@ -2,6 +2,7 @@ package com.example.individualprojectcsc490;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,49 +19,37 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initUI();
+
         //Calculators Button
-        calculatorsButton = (Button) findViewById(R.id.calculatorsButton);
-        calculatorsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openCalculatorsPage();
-            }
-        });
+        changeActivity(calculatorsButton, CalculatorsPage.class);
 
         //Budgeting Button
-        budgetingButton = (Button) findViewById(R.id.budgetingButton);
-        budgetingButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openBudgetingPage();
-            }
-        });
+        changeActivity(budgetingButton, BudgetingPage.class);
 
         //References Button
-        referencesButton = (Button) findViewById(R.id.referencesButton);
-        referencesButton.setOnClickListener(new View.OnClickListener() {
+        changeActivity(referencesButton, ReferencesPage.class);
+    }
+
+    //Sets local fields
+    private void initUI() {
+        calculatorsButton = findViewById(R.id.calculatorsButton);
+        budgetingButton   = findViewById(R.id.budgetingButton);
+        referencesButton  = findViewById(R.id.referencesButton);
+    }
+
+    /**
+     *
+     * @param button - button that is clicked on Main Page
+     * @param page - the new activity to change to
+     */
+    private void changeActivity(Button button, final Class<? extends Activity> page){
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openReferencesPage();
+                Intent intent = new Intent(getBaseContext(), page);
+                startActivity(intent);
             }
         });
-    }
-
-    //Switches to CalculatorsPage Activity
-    public void openCalculatorsPage(){
-        Intent intent = new Intent(this, CalculatorsPage.class);
-        startActivity(intent);
-    }
-
-    //Switches to BudgetingPage Activity
-    public void openBudgetingPage(){
-        Intent intent = new Intent(this, BudgetingPage.class);
-        startActivity(intent);
-    }
-
-    //Switches to ReferencesPage Activity
-    public void openReferencesPage(){
-        Intent intent = new Intent(this, ReferencesPage.class);
-        startActivity(intent);
     }
 }

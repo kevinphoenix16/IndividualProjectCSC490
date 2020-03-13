@@ -76,6 +76,7 @@ public class ReferencesPage extends AppCompatActivity {
 
     }
 
+
     private void initUI() {
         booksButton    = findViewById(R.id.booksButton);
         blogsButton    = findViewById(R.id.blogsButton);
