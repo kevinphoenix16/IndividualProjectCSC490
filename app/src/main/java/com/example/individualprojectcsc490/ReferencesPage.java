@@ -2,6 +2,8 @@ package com.example.individualprojectcsc490;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +23,6 @@ public class ReferencesPage extends AppCompatActivity {
     private Button toolsButton;
 
     private ListView referencedList;
-    private ArrayAdapter arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,49 +32,33 @@ public class ReferencesPage extends AppCompatActivity {
         initUI();
 
         //Change text to books
-        booksButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ArrayAdapter<String> booksAdapter = new ArrayAdapter<String>(ReferencesPage.this,
-                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.books));
-                booksAdapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
-                referencedList.setAdapter(booksAdapter);
-            }
-        });
+        changeTextDisplayed(booksButton, R.array.books);
 
         //Change text to Blogs
-        blogsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ArrayAdapter<String> booksAdapter = new ArrayAdapter<String>(ReferencesPage.this,
-                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.blogs));
-                booksAdapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
-                referencedList.setAdapter(booksAdapter);
-            }
-        });
+        changeTextDisplayed(blogsButton, R.array.blogs);
 
         //Change text to Videos
-        videosButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ArrayAdapter<String> booksAdapter = new ArrayAdapter<String>(ReferencesPage.this,
-                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.videos));
-                booksAdapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
-                referencedList.setAdapter(booksAdapter);
-            }
-        });
+        changeTextDisplayed(videosButton, R.array.videos);
 
         //Change text to Tools
-        toolsButton.setOnClickListener(new View.OnClickListener() {
+        changeTextDisplayed(toolsButton, R.array.tools);
+    }
+
+    /**
+     *
+     * @param button - button that is clicked on References Page
+     * @param ID - the ID of the array-list to display
+     */
+    private void changeTextDisplayed(Button button, final int ID) {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ArrayAdapter<String> booksAdapter = new ArrayAdapter<String>(ReferencesPage.this,
-                        android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.tools));
+                        android.R.layout.simple_list_item_1, getResources().getStringArray(ID));
                 booksAdapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
                 referencedList.setAdapter(booksAdapter);
             }
         });
-
     }
 
 
@@ -85,4 +70,6 @@ public class ReferencesPage extends AppCompatActivity {
 
         referencedList = findViewById(R.id.referencedList);
     }
+
+
 }
