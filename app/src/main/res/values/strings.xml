@@ -31,6 +31,9 @@
     <string name="healthMedicalValue">5</string>
     <string name="otherValue">10</string>
 
+    //Created Budget Page
+    <string name="createdBudgetPage_title">Created Budget</string>
+
     //Reference page
     <string name="refPage_title">References</string>
     <string name="booksButton">Books</string>

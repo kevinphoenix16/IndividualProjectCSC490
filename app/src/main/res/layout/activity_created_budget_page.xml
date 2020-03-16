@@ -2,8 +2,209 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/createdBudgetPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CreatedBudgetPage">
 
+    <TextView
+        android:id="@+id/otherFieldValue"
+        android:layout_width="148dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toEndOf="@+id/otherCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/healthMedicalFieldValue"
+        app:layout_constraintVertical_bias="0.161" />
+
+    <TextView
+        android:id="@+id/healthMedicalFieldValue"
+        android:layout_width="148dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintStart_toEndOf="@+id/healthMedicalCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/insuranceFieldValue"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <TextView
+        android:id="@+id/utilitiesFieldValue"
+        android:layout_width="148dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginLeft="127dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/utilitiesCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/transportationFieldValue"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <TextView
+        android:id="@+id/insuranceFieldValue"
+        android:layout_width="148dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toEndOf="@+id/insuranceCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/utilitiesFieldValue"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <TextView
+        android:id="@+id/transportationFieldValue"
+        android:layout_width="148dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toEndOf="@+id/transportationCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/housingFieldValue"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <TextView
+        android:id="@+id/housingFieldValue"
+        android:layout_width="148dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toEndOf="@+id/housingCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/foodFieldValue"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <TextView
+        android:id="@+id/otherCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="156dp"
+        android:text="@string/otherCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/healthMedicalCategroy"
+        app:layout_constraintTop_toTopOf="@+id/otherFieldValue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/housingCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/housingCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/foodCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/foodCategroy"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <TextView
+        android:id="@+id/utilitiesCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/utilitiesCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/transportationCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/transportationCategroy"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <TextView
+        android:id="@+id/insuranceCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/insuranceCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/utilitiesCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/utilitiesCategroy"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <TextView
+        android:id="@+id/transportationCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/transportationCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/housingCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/housingCategroy"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/healthMedicalCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/healthMedicalCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/insuranceCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/insuranceCategroy"
+        app:layout_constraintVertical_bias="0.117" />
+
+    <TextView
+        android:id="@+id/foodCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/foodCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <TextView
+        android:id="@+id/createdBudgetPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/createdBudgetPage_title"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <TextView
+        android:id="@+id/foodFieldValue"
+        android:layout_width="148dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginLeft="152dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/foodCategroy"
+        app:layout_constraintTop_toTopOf="@+id/foodCategroy"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
