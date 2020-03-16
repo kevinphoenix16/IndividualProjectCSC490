@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Calculators.RetireEarlyPage"></activity>
+        <activity android:name=".CreatedBudgetPage"></activity>
+        <activity android:name=".Calculators.RetireEarlyPage" />
         <activity android:name=".Calculators.YearlySpendingPage" />
         <activity android:name=".Calculators.SavingsRatePage" />
         <activity android:name=".ReferencesPage" />

@@ -2,6 +2,7 @@ package com.example.individualprojectcsc490;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,7 @@ public class BudgetingPage extends AppCompatActivity {
     private TextView otherFieldValue;
     private TextView percentageSumValue;
 
+    private double incomeValue;
     private double foodValue;
     private double housingValue;
     private double transportationValue;
@@ -55,14 +57,15 @@ public class BudgetingPage extends AppCompatActivity {
         createBudgetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double incomeValue = Double.parseDouble(incomeFieldValue.getText().toString());
+                incomeValue = Double.parseDouble(incomeFieldValue.getText().toString());
 
                 //pass variables to another screen
+                Intent i = new Intent(BudgetingPage.this, CreatedBudgetPage.class);
+                setupIntent(i);
+                startActivity(i);
             }
         });
     }
-
-
 
     //Sets local fields
     private void initUI() {
@@ -113,4 +116,29 @@ public class BudgetingPage extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Sets variables to be passed to CreatedBudgetPage
+     * @param i - intent to add the budgeted value to
+     */
+    private void setupIntent(Intent i) {
+        i.putExtra("foodValue", CalculateBudgetedValue(foodValue));
+        i.putExtra("housingValue", CalculateBudgetedValue(housingValue));
+        i.putExtra("transportationValue", CalculateBudgetedValue(transportationValue));
+        i.putExtra("utilitiesValue", CalculateBudgetedValue(utilitiesValue));
+        i.putExtra("insuranceValue", CalculateBudgetedValue(insuranceValue));
+        i.putExtra("healthMedicalValue", CalculateBudgetedValue(healthMedicalValue));
+        i.putExtra("otherValue", CalculateBudgetedValue(otherValue));
+    }
+
+    /**
+     *
+     * @param value - the field to calculate the income allocation of
+     * @return - a Double breakdown of the income and percent allocated to that field
+     */
+    private Double CalculateBudgetedValue(Double value){
+        return (incomeValue * value)/100;
+    }
+
+
 }
