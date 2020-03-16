@@ -2,6 +2,7 @@ package com.example.individualprojectcsc490;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,15 +42,27 @@ public class BudgetingPage extends AppCompatActivity {
         initUI();
 
         numberFormat = new DecimalFormat("#,##0.00");
-        percentageSumValue.setText(numberFormat.format( sumCategories())); //Need to get this to update with any number change
+        percentageSumValue.setText(numberFormat.format(sumCategories())); //Need to get this to update with any number change
+
+        updatePercentageSum(foodFieldValue);
+        updatePercentageSum(housingFieldValue);
+        updatePercentageSum(transportationFieldValue);
+        updatePercentageSum(utilitiesFieldValue);
+        updatePercentageSum(insuranceFieldValue);
+        updatePercentageSum(healthMedicalFieldValue);
+        updatePercentageSum(otherFieldValue);
 
         createBudgetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Change to another activity --> that has $'s in each field and a chart breakdown
+                double incomeValue = Double.parseDouble(incomeFieldValue.getText().toString());
+
+                //pass variables to another screen
             }
         });
     }
+
+
 
     //Sets local fields
     private void initUI() {
@@ -77,6 +90,27 @@ public class BudgetingPage extends AppCompatActivity {
         otherValue          = Double.parseDouble(otherFieldValue.getText().toString());
 
         return foodValue + housingValue + transportationValue + utilitiesValue
-                + insuranceValue + healthMedicalValue + otherValue;
+                         + insuranceValue + healthMedicalValue + otherValue;
+    }
+
+    /**
+     * Updates the value of textview percentageSumValue when a field is updated
+     * @param fieldValue - the textview being change to cause the page update
+     */
+    private void updatePercentageSum(TextView fieldValue) {
+        fieldValue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentPercentageSum = sumCategories();
+                percentageSumValue.setText(numberFormat.format(currentPercentageSum));
+
+                if(currentPercentageSum <= 100) {
+                    percentageSumValue.setTextColor(Color.GREEN);
+                } else {
+                    percentageSumValue.setTextColor(Color.RED);
+                }
+
+            }
+        });
     }
 }
