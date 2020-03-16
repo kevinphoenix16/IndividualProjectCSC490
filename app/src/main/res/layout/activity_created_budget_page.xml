@@ -178,7 +178,7 @@
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.21" />
+        app:layout_constraintVertical_bias="0.256" />
 
     <TextView
         android:id="@+id/createdBudgetPageTitle"
@@ -207,4 +207,14 @@
         app:layout_constraintStart_toEndOf="@+id/foodCategroy"
         app:layout_constraintTop_toTopOf="@+id/foodCategroy"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/paymentPeriodSpinnerBudget"
+        android:layout_width="359dp"
+        android:layout_height="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188" />
 </androidx.constraintlayout.widget.ConstraintLayout>

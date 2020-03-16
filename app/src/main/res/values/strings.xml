@@ -5,6 +5,28 @@
     <string name="computeButton">Compute</string>
     <string name="initValue">0</string>
 
+    <string name="foodCategory">Food</string>
+    <string name="housingCategory">Housing</string>
+    <string name="transportationCategory">Transportation</string>
+    <string name="utilitiesCategory">Utilities</string>
+    <string name="insuranceCategory">Insurance</string>
+    <string name="healthMedicalCategory">Health/Medical</string>
+    <string name="otherCategory">Other</string>
+
+    <string name="foodHint">Groceries, Dining</string>
+    <string name="housingHint">Rent, Mortgage</string>
+    <string name="transportationHint">Car, Gas, Travel</string>
+    <string name="utilitiesHint">Water, Gas, Electric</string>
+    <string name="insuranceHint">Housing, Car, Health</string>
+    <string name="healthMedicalHint">Medicine, Injuries, Sickness</string>
+    <string name="otherHint">Misc.</string>
+
+    <string-array name="paymentPeriodOptions">
+        <item>Monthly</item>
+        <item>Annually</item>
+        <item>Weekly</item>
+    </string-array>
+
     //Home page
     <string name="homePage_title">FI/RE</string>
     <string name="calc_button">Calculators</string>
@@ -104,27 +126,5 @@
     //Yearly Spending page
     <string name="yearlySpendingPage_title">Yearly Spending</string>
     <string name="yearlySpendingValue">Your Yearly Spending</string>
-
-    <string-array name="paymentPeriodOptions">
-        <item>Monthly</item>
-        <item>Annually</item>
-        <item>Weekly</item>
-    </string-array>
-
-    <string name="foodCategory">Food</string>
-    <string name="housingCategory">Housing</string>
-    <string name="transportationCategory">Transportation</string>
-    <string name="utilitiesCategory">Utilities</string>
-    <string name="insuranceCategory">Insurance</string>
-    <string name="healthMedicalCategory">Health/Medical</string>
-    <string name="otherCategory">Other</string>
-
-    <string name="foodHint">Groceries, Dining</string>
-    <string name="housingHint">Rent, Mortgage</string>
-    <string name="transportationHint">Car, Gas, Travel</string>
-    <string name="utilitiesHint">Water, Gas, Electric</string>
-    <string name="insuranceHint">Housing, Car, Health</string>
-    <string name="healthMedicalHint">Medicine, Injuries, Sickness</string>
-    <string name="otherHint">Misc.</string>
 
 </resources>

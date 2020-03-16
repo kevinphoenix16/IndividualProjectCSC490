@@ -3,16 +3,24 @@ package com.example.individualprojectcsc490;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
 public class CreatedBudgetPage extends AppCompatActivity {
 
+    private final int ANNUALLY = 1;
+    private final int MONTHLY = 12;
+    private final int WEEKLY = 52;
+
     private Double incomeValue;
     private DecimalFormat numberFormat;
+    private Spinner paymentPeriodSpinnerBudget;
 
     private double foodValue;
     private double housingValue;
@@ -42,8 +50,22 @@ public class CreatedBudgetPage extends AppCompatActivity {
         }
 
         initUI();
+        setupSpinner();
+        calculateFromSpinner();
 
-        setUI();
+        //Checks for updates from Spinner
+        paymentPeriodSpinnerBudget.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                calculateFromSpinner();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                //Needed for listener but no code is necessary
+            }
+        });
+
     }
 
     //Gets the values passed in from BudgetingPage
@@ -61,28 +83,56 @@ public class CreatedBudgetPage extends AppCompatActivity {
 
     //Sets local fields references
     private void initUI() {
-        incomeFieldValue         = findViewById(R.id.incomeFieldValue);
+        incomeFieldValue           = findViewById(R.id.incomeFieldValue);
+        paymentPeriodSpinnerBudget = findViewById(R.id.paymentPeriodSpinnerBudget);
 
-        foodFieldValue           = findViewById(R.id.foodFieldValue);
-        housingFieldValue        = findViewById(R.id.housingFieldValue);
-        transportationFieldValue = findViewById(R.id.transportationFieldValue);
-        utilitiesFieldValue      = findViewById(R.id.utilitiesFieldValue);
-        insuranceFieldValue      = findViewById(R.id.insuranceFieldValue);
-        healthMedicalFieldValue  = findViewById(R.id.healthMedicalFieldValue);
-        otherFieldValue          = findViewById(R.id.otherFieldValue);
+        foodFieldValue             = findViewById(R.id.foodFieldValue);
+        housingFieldValue          = findViewById(R.id.housingFieldValue);
+        transportationFieldValue   = findViewById(R.id.transportationFieldValue);
+        utilitiesFieldValue        = findViewById(R.id.utilitiesFieldValue);
+        insuranceFieldValue        = findViewById(R.id.insuranceFieldValue);
+        healthMedicalFieldValue    = findViewById(R.id.healthMedicalFieldValue);
+        otherFieldValue            = findViewById(R.id.otherFieldValue);
     }
 
-    //Sets local fields values
-    private void setUI() {
+    //Sets up the drop-down Spinner container
+    private void setupSpinner() {
+        ArrayAdapter<String> paymentPeriodAdapter = new ArrayAdapter<String>(CreatedBudgetPage.this,
+                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.paymentPeriodOptions));
+        paymentPeriodAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        paymentPeriodSpinnerBudget.setAdapter(paymentPeriodAdapter);
+    }
+
+    //Gets the value selected from the spinner and sets the UI's values
+    private void calculateFromSpinner() {
+        String paymentPeriod = paymentPeriodSpinnerBudget.getSelectedItem().toString();
+        switch (paymentPeriod) {
+            case "Monthly":
+                setUI(MONTHLY);
+                break;
+            case "Annually":
+                setUI(ANNUALLY);
+                break;
+            case "Weekly":
+                setUI(WEEKLY);
+                break;
+        }
+    }
+
+    /**
+     * Sets local fields values
+     * @param paymentPeriod - the period selected from the spinner
+     */
+    private void setUI(int paymentPeriod) {
         numberFormat = new DecimalFormat("$#,##0.00");
 
-        foodFieldValue.setText(numberFormat.format(foodValue));
-        housingFieldValue.setText(numberFormat.format(housingValue));
-        transportationFieldValue.setText(numberFormat.format(transportationValue));
-        utilitiesFieldValue.setText(numberFormat.format(utilitiesValue));
-        insuranceFieldValue.setText(numberFormat.format(insuranceValue));
-        healthMedicalFieldValue.setText(numberFormat.format(healthMedicalValue));
-        otherFieldValue.setText(numberFormat.format(otherValue));
+        foodFieldValue.setText(numberFormat.format(foodValue/paymentPeriod));
+        housingFieldValue.setText(numberFormat.format(housingValue/paymentPeriod));
+        transportationFieldValue.setText(numberFormat.format(transportationValue/paymentPeriod));
+        utilitiesFieldValue.setText(numberFormat.format(utilitiesValue/paymentPeriod));
+        insuranceFieldValue.setText(numberFormat.format(insuranceValue/paymentPeriod));
+        healthMedicalFieldValue.setText(numberFormat.format(healthMedicalValue/paymentPeriod));
+        otherFieldValue.setText(numberFormat.format(otherValue/paymentPeriod));
 
     }
 }
