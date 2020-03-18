@@ -63,11 +63,15 @@ public class SavingsRatePage extends AppCompatActivity {
 
     //Gets values from TextViews and returns the savings rate
     private Double computeSavingsRate() {
-        incomeValue   = Double.parseDouble(incomeFieldValue.getText().toString());
-        taxesValue    = Double.parseDouble(taxesFieldValue.getText().toString());
-        spendingValue = Double.parseDouble(spendingFieldValue.getText().toString());
+        incomeValue   = validFieldValue(incomeFieldValue);
+        taxesValue    = validFieldValue(taxesFieldValue);
+        spendingValue = validFieldValue(spendingFieldValue);
 
-        return ((incomeValue-taxesValue)-spendingValue)/(incomeValue-taxesValue);
+        if(incomeValue-taxesValue == 0){
+            return 0.0;
+        } else {
+            return ((incomeValue - taxesValue) - spendingValue) / Math.abs(incomeValue - taxesValue);
+        }
     }
 
     /**
