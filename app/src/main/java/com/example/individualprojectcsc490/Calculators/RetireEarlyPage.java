@@ -92,7 +92,8 @@ public class RetireEarlyPage extends AppCompatActivity {
         double numerator = Math.log10(numeratorPart1 / numeratorPart2);
         double denominator = Math.log10(1 + annualReturnValue);
 
-        double yearsToRetire = numerator/denominator;
+        double yearsToRetire = numerator / denominator;
+
 
         numberFormat = new DecimalFormat("#,##0.00 Years");
         yearsToRetireFieldValue.setText(numberFormat.format(yearsToRetire));

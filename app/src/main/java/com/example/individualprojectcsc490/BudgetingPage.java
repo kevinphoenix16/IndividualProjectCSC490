@@ -59,7 +59,7 @@ public class BudgetingPage extends AppCompatActivity {
         createBudgetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                incomeValue = Double.parseDouble(incomeFieldValue.getText().toString());
+                incomeValue = validFieldValue(incomeFieldValue);
 
                 //pass variables to another screen
                 Intent i = new Intent(BudgetingPage.this, CreatedBudgetPage.class);
