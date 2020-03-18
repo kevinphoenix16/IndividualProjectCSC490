@@ -84,17 +84,31 @@ public class YearlySpendingPage extends AppCompatActivity {
 
     //Adds up all categories of spending
     private double sumCategories() {
-        foodValue           = Double.parseDouble(foodFieldValue.getText().toString());
-        housingValue        = Double.parseDouble(housingFieldValue.getText().toString());
-        transportationValue = Double.parseDouble(transportationFieldValue.getText().toString());
-        utilitiesValue      = Double.parseDouble(utilitiesFieldValue.getText().toString());
-        insuranceValue      = Double.parseDouble(insuranceFieldValue.getText().toString());
-        healthMedicalValue  = Double.parseDouble(healthMedicalFieldValue.getText().toString());
-        otherValue          = Double.parseDouble(otherFieldValue.getText().toString());
+        foodValue           = validFieldValue(foodFieldValue);
+        housingValue        = validFieldValue(housingFieldValue);
+        transportationValue = validFieldValue(transportationFieldValue);
+        utilitiesValue      = validFieldValue(utilitiesFieldValue);
+        insuranceValue      = validFieldValue(insuranceFieldValue);
+        healthMedicalValue  = validFieldValue(healthMedicalFieldValue);
+        otherValue          = validFieldValue(otherFieldValue);
 
         return foodValue + housingValue + transportationValue + utilitiesValue
                          + insuranceValue + healthMedicalValue + otherValue;
     }
+
+    /**
+     * Checks to see if the value of the textview is valid
+     * @param valueToCheck - the textview to check
+     * @return - 0.0 is the field is empty or the value in it if it is not
+     */
+    private double validFieldValue(TextView valueToCheck){
+        if(foodFieldValue.getText().toString().matches("")) {
+            return 0.0;
+        } else {
+            return Double.parseDouble(foodFieldValue.getText().toString());
+        }
+    }
+
 
     /**
      *
