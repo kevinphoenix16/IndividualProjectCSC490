@@ -69,4 +69,18 @@ public class SavingsRatePage extends AppCompatActivity {
 
         return ((incomeValue-taxesValue)-spendingValue)/(incomeValue-taxesValue);
     }
+
+    /**
+     * Checks to see if the value of the textview is valid
+     * @param valueToCheck - the textview to check
+     * @return - 0.0 is the field is empty or the value in it if it is not
+     */
+    private double validFieldValue(TextView valueToCheck){
+        if(valueToCheck.getText().toString().matches("")) {
+            return 0.0;
+        } else {
+            return Double.parseDouble(valueToCheck.getText().toString());
+        }
+    }
+
 }

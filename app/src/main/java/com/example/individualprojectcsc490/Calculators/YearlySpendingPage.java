@@ -102,10 +102,10 @@ public class YearlySpendingPage extends AppCompatActivity {
      * @return - 0.0 is the field is empty or the value in it if it is not
      */
     private double validFieldValue(TextView valueToCheck){
-        if(foodFieldValue.getText().toString().matches("")) {
+        if(valueToCheck.getText().toString().matches("")) {
             return 0.0;
         } else {
-            return Double.parseDouble(foodFieldValue.getText().toString());
+            return Double.parseDouble(valueToCheck.getText().toString());
         }
     }
 
