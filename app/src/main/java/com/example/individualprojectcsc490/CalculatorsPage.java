@@ -14,7 +14,7 @@ public class CalculatorsPage extends AppCompatActivity {
 
     private Button retireEarlyButton;
     private Button savingsRateButton;
-    private Button yearlySpendingButton;
+    private Button yearlyExpensesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +29,15 @@ public class CalculatorsPage extends AppCompatActivity {
         //SavingsRate Button
         changeActivity(savingsRateButton, SavingsRatePage.class);
 
-        //YearlySpending Button
-        changeActivity(yearlySpendingButton, YearlySpendingPage.class);
+        //YearlyExpenses Button
+        changeActivity(yearlyExpensesButton, YearlyExpensesPage.class);
     }
 
     //Sets local fields
     private void initUI() {
         retireEarlyButton    = findViewById(R.id.retireEarlyButton);
         savingsRateButton    = findViewById(R.id.savingsRateButton);
-        yearlySpendingButton = findViewById(R.id.yearlySpendingButton);
+        yearlyExpensesButton = findViewById(R.id.yearlyExpensesButton);
     }
 
     /**

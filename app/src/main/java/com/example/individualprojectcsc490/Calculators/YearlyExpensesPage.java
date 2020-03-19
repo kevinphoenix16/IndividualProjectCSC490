@@ -13,7 +13,7 @@ import com.example.individualprojectcsc490.R;
 
 import java.text.DecimalFormat;
 
-public class YearlySpendingPage extends AppCompatActivity {
+public class YearlyExpensesPage extends AppCompatActivity {
 
     private final int ANNUALLY = 1;
     private final int MONTHLY = 12;
@@ -23,7 +23,7 @@ public class YearlySpendingPage extends AppCompatActivity {
     private Button compute;
     private DecimalFormat numberFormat;
 
-    private TextView yearlySpendingValue;
+    private TextView yearlyExpensesValue;
     private TextView foodFieldValue;
     private TextView housingFieldValue;
     private TextView transportationFieldValue;
@@ -43,7 +43,7 @@ public class YearlySpendingPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_yearly_spending_page);
+        setContentView(R.layout.activity_yearly_expenses_page);
 
         setupUI();
         setupSpinner();
@@ -54,17 +54,17 @@ public class YearlySpendingPage extends AppCompatActivity {
             public void onClick(View v) {
                 double subTotal = sumCategories();
                 String paymentPeriod = paymentPeriodSpinner.getSelectedItem().toString();
-                setSpendingValue(paymentPeriod, subTotal);
+                setExpensesValue(paymentPeriod, subTotal);
             }
         });
     }
 
     //Sets up local variables
     private void setupUI() {
-        paymentPeriodSpinner     = findViewById(R.id.paymentPeriodSpinnerSpending);
-        compute                  = findViewById(R.id.computeButtonSpending);
+        paymentPeriodSpinner     = findViewById(R.id.paymentPeriodSpinnerExpenses);
+        compute                  = findViewById(R.id.computeButtonExpenses);
 
-        yearlySpendingValue      = findViewById(R.id.yearlySpendingValue);
+        yearlyExpensesValue      = findViewById(R.id.yearlyExpensesValue);
         foodFieldValue           = findViewById(R.id.foodFieldValue);
         housingFieldValue        = findViewById(R.id.housingFieldValue);
         transportationFieldValue = findViewById(R.id.transportationFieldValue);
@@ -76,13 +76,13 @@ public class YearlySpendingPage extends AppCompatActivity {
 
     //Sets up the drop-down Spinner container
     private void setupSpinner() {
-        ArrayAdapter<String> paymentPeriodAdapter = new ArrayAdapter<>(YearlySpendingPage.this,
+        ArrayAdapter<String> paymentPeriodAdapter = new ArrayAdapter<>(YearlyExpensesPage.this,
                 android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.paymentPeriodOptions));
         paymentPeriodAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         paymentPeriodSpinner.setAdapter(paymentPeriodAdapter);
     }
 
-    //Adds up all categories of spending
+    //Adds up all categories of expenses
     private double sumCategories() {
         foodValue           = validFieldValue(foodFieldValue);
         housingValue        = validFieldValue(housingFieldValue);
@@ -115,18 +115,18 @@ public class YearlySpendingPage extends AppCompatActivity {
      * @param paymentPeriod - period selected from spinner
      * @param subTotal - total of fields before the period multiplier is applied
      */
-    private void setSpendingValue(String paymentPeriod, double subTotal) {
+    private void setExpensesValue(String paymentPeriod, double subTotal) {
         numberFormat = new DecimalFormat("$#,##0.00");
 
         switch (paymentPeriod) {
             case "Monthly":
-                yearlySpendingValue.setText(numberFormat.format(subTotal * MONTHLY));
+                yearlyExpensesValue.setText(numberFormat.format(subTotal * MONTHLY));
                 break;
             case "Annually":
-                yearlySpendingValue.setText(numberFormat.format(subTotal * ANNUALLY));
+                yearlyExpensesValue.setText(numberFormat.format(subTotal * ANNUALLY));
                 break;
             case "Weekly":
-                yearlySpendingValue.setText(numberFormat.format(subTotal * WEEKLY));
+                yearlyExpensesValue.setText(numberFormat.format(subTotal * WEEKLY));
                 break;
         }
     }

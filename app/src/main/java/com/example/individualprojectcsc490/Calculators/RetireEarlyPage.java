@@ -94,7 +94,6 @@ public class RetireEarlyPage extends AppCompatActivity {
 
         double yearsToRetire = numerator / denominator;
 
-
         numberFormat = new DecimalFormat("#,##0.00 Years");
         yearsToRetireFieldValue.setText(numberFormat.format(yearsToRetire));
     }

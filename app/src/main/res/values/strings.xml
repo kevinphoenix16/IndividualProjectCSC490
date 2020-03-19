@@ -37,7 +37,7 @@
     <string name="calcPage_title">FI/RE Calculators</string>
     <string name="retireEarlyButton">Retire Early Calculator</string>
     <string name="saveRate_button">Savings Rate Calculator</string>
-    <string name="spendRate_button">Yearly Spending Calculator</string>
+    <string name="expenseRate_button">Yearly Expenses Calculator</string>
 
     //Budgeting page
     <string name="budgetPage_title">Budget Creator</string>
@@ -117,14 +117,14 @@
 
     <string name="incomeCategory">Income</string>
     <string name="taxesCategory">Taxes</string>
-    <string name="spendingCategory">Spending</string>
+    <string name="expensesCategory">Expenses</string>
 
     <string name="incomeHint">Pre-tax Salary or Yearly Pay</string>
     <string name="taxesHint">Taxes on your income</string>
-    <string name="spendingHint">Use Spending Calculator</string>
+    <string name="expensesHint">Use Expenses Calculator</string>
 
-    //Yearly Spending page
-    <string name="yearlySpendingPage_title">Yearly Spending</string>
-    <string name="yearlySpendingValue">Your Yearly Spending</string>
+    //Yearly Expenses page
+    <string name="yearlyExpensesPage_title">Yearly Expenses</string>
+    <string name="yearlyExpensesValue">Your Yearly Expenses</string>
 
 </resources>

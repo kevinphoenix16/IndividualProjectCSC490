@@ -20,12 +20,12 @@ public class SavingsRatePage extends AppCompatActivity {
     private TextView savingsRateFieldValue;
     private TextView incomeFieldValue;
     private TextView taxesFieldValue;
-    private TextView spendingFieldValue;
+    private TextView expensesFieldValue;
 
     private double savingsRate;
     private double incomeValue;
     private double taxesValue;
-    private double spendingValue;
+    private double expensesValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,19 +58,19 @@ public class SavingsRatePage extends AppCompatActivity {
         savingsRateFieldValue = findViewById(R.id.savingsRateFieldValue);
         incomeFieldValue      = findViewById(R.id.incomeFieldValue);
         taxesFieldValue       = findViewById(R.id.taxesFieldValue);
-        spendingFieldValue    = findViewById(R.id.spendingFieldValue);
+        expensesFieldValue    = findViewById(R.id.expensesFieldValue);
     }
 
     //Gets values from TextViews and returns the savings rate
     private Double computeSavingsRate() {
         incomeValue   = validFieldValue(incomeFieldValue);
         taxesValue    = validFieldValue(taxesFieldValue);
-        spendingValue = validFieldValue(spendingFieldValue);
+        expensesValue = validFieldValue(expensesFieldValue);
 
         if(incomeValue-taxesValue == 0){
             return 0.0;
         } else {
-            return ((incomeValue - taxesValue) - spendingValue) / Math.abs(incomeValue - taxesValue);
+            return ((incomeValue - taxesValue) - expensesValue) / Math.abs(incomeValue - taxesValue);
         }
     }
 

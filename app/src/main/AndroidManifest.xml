@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".CreatedBudgetPage"></activity>
         <activity android:name=".Calculators.RetireEarlyPage" />
-        <activity android:name=".Calculators.YearlySpendingPage" />
+        <activity android:name=".Calculators.YearlyExpensesPage" />
         <activity android:name=".Calculators.SavingsRatePage" />
         <activity android:name=".ReferencesPage" />
         <activity android:name=".BudgetingPage" />

@@ -8,24 +8,24 @@
     tools:context=".Calculators.SavingsRatePage">
 
     <TextView
-        android:id="@+id/spendingCategroy"
+        android:id="@+id/expensesCategroy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/spendingCategory"
+        android:text="@string/expensesCategory"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spendingFieldValue"
+        app:layout_constraintEnd_toStartOf="@+id/expensesFieldValue"
         app:layout_constraintHorizontal_bias="0.61"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spendingFieldValue"
+        app:layout_constraintTop_toTopOf="@+id/expensesFieldValue"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/spendingFieldValue"
+        android:id="@+id/expensesFieldValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/spendingHint"
+        android:hint="@string/expensesHint"
         android:inputType="number|numberDecimal"
         android:text="@string/initValue"
         app:layout_constraintBottom_toBottomOf="parent"
