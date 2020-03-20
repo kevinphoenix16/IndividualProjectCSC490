@@ -32,6 +32,7 @@
     <string name="calc_button">Calculators</string>
     <string name="budget_button">Budgeting</string>
     <string name="ref_button">References</string>
+    <string name="info_button">Info</string>
 
     //Calculator page
     <string name="calcPage_title">FI/RE Calculators</string>
@@ -126,5 +127,13 @@
     //Yearly Expenses page
     <string name="yearlyExpensesPage_title">Yearly Expenses</string>
     <string name="yearlyExpensesValue">Your Yearly Expenses</string>
+
+    //Info Page
+    <string name="infoPage_title">Info</string>
+    <string name="aboutTitle">About:</string>
+    <string name="aboutContent">Kevin Phoenix is a Computer Science Major and Mathematics Minor at Augustana College in Rock Island, IL. This app was created during his CSC-490 Senior Inquiry Computer Science Individual Project.</string>
+    <string name="disclaimerTitle">Disclaimer:</string>
+    <string name="disclaimerContent">This app is for entertainment purposes only and is not meant to be financial or investing advice. I am not a licensed financial advisor and this app should not be used for making financial or investing decisions.</string>
+
 
 </resources>
