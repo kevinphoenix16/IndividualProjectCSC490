@@ -47,8 +47,8 @@ public class ReferencesPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ArrayAdapter<String> booksAdapter = new ArrayAdapter<>(ReferencesPage.this,
-                        android.R.layout.simple_list_item_1, getResources().getStringArray(ID));
-                booksAdapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
+                        R.layout.custom_list, getResources().getStringArray(ID));
+                booksAdapter.setDropDownViewResource(R.layout.custom_list);
                 referencedList.setAdapter(booksAdapter);
             }
         });
