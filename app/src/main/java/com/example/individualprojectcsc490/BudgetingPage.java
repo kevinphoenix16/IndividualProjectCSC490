@@ -136,6 +136,8 @@ public class BudgetingPage extends AppCompatActivity {
      * @param i - intent to add the budgeted value to
      */
     private void setupIntent(Intent i) {
+        i.putExtra("incomeValue", CalculateBudgetedValue(incomeValue));
+
         i.putExtra("foodValue", CalculateBudgetedValue(foodValue));
         i.putExtra("housingValue", CalculateBudgetedValue(housingValue));
         i.putExtra("transportationValue", CalculateBudgetedValue(transportationValue));

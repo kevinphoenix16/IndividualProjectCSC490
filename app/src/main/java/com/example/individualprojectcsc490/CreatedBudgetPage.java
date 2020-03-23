@@ -29,6 +29,7 @@ public class CreatedBudgetPage extends AppCompatActivity {
     private double insuranceValue;
     private double healthMedicalValue;
     private double otherValue;
+    private double leftoverValue;
 
     private TextView incomeFieldValue;
     private TextView foodFieldValue;
@@ -38,6 +39,7 @@ public class CreatedBudgetPage extends AppCompatActivity {
     private TextView insuranceFieldValue;
     private TextView healthMedicalFieldValue;
     private TextView otherFieldValue;
+    private TextView leftoverFieldValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +81,10 @@ public class CreatedBudgetPage extends AppCompatActivity {
         insuranceValue      = extras.getDouble("insuranceValue");
         healthMedicalValue  = extras.getDouble("healthMedicalValue");
         otherValue          = extras.getDouble("otherValue");
+
+        leftoverValue       = incomeValue - (foodValue + housingValue + transportationValue + utilitiesValue
+                                                       + insuranceValue + healthMedicalValue + otherValue);
+
     }
 
     //Sets local fields references
@@ -93,6 +99,7 @@ public class CreatedBudgetPage extends AppCompatActivity {
         insuranceFieldValue        = findViewById(R.id.insuranceFieldValue);
         healthMedicalFieldValue    = findViewById(R.id.healthMedicalFieldValue);
         otherFieldValue            = findViewById(R.id.otherFieldValue);
+        leftoverFieldValue         = findViewById(R.id.leftoverFieldValue);
     }
 
     //Sets up the drop-down Spinner container
@@ -133,6 +140,8 @@ public class CreatedBudgetPage extends AppCompatActivity {
         insuranceFieldValue.setText(numberFormat.format(insuranceValue/paymentPeriod));
         healthMedicalFieldValue.setText(numberFormat.format(healthMedicalValue/paymentPeriod));
         otherFieldValue.setText(numberFormat.format(otherValue/paymentPeriod));
+
+        leftoverFieldValue.setText(numberFormat.format(leftoverValue/paymentPeriod));
 
     }
 }

@@ -56,6 +56,7 @@
 
     //Created Budget Page
     <string name="createdBudgetPage_title">Created Budget</string>
+    <string name="leftoverCategory">Leftover</string>
 
     //Reference page
     <string name="refPage_title">References</string>

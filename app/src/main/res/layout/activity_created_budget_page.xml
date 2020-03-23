@@ -8,6 +8,32 @@
     tools:context=".CreatedBudgetPage">
 
     <TextView
+        android:id="@+id/leftoverFieldValue"
+        android:layout_width="148dp"
+        android:layout_height="32dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toEndOf="@+id/leftoverCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/otherFieldValue"
+        app:layout_constraintVertical_bias="0.259" />
+
+    <TextView
+        android:id="@+id/leftoverCategroy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/leftoverCategory"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/otherCategroy"
+        app:layout_constraintTop_toBottomOf="@+id/otherCategroy"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
         android:id="@+id/otherFieldValue"
         android:layout_width="148dp"
         android:layout_height="32dp"
