@@ -105,8 +105,8 @@ public class CreatedBudgetPage extends AppCompatActivity {
     //Sets up the drop-down Spinner container
     private void setupSpinner() {
         ArrayAdapter<String> paymentPeriodAdapter = new ArrayAdapter<String>(CreatedBudgetPage.this,
-                android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.paymentPeriodOptions));
-        paymentPeriodAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                R.layout.custom_spinner,getResources().getStringArray(R.array.paymentPeriodOptions));
+        paymentPeriodAdapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         paymentPeriodSpinnerBudget.setAdapter(paymentPeriodAdapter);
     }
 
