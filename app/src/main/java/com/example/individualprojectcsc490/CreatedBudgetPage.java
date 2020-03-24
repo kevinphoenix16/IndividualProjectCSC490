@@ -3,7 +3,6 @@ package com.example.individualprojectcsc490;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -102,7 +101,7 @@ public class CreatedBudgetPage extends AppCompatActivity {
 
     //Sets up the drop-down Spinner container
     private void setupSpinner() {
-        ArrayAdapter<String> paymentPeriodAdapter = new ArrayAdapter<String>(CreatedBudgetPage.this,
+        ArrayAdapter<String> paymentPeriodAdapter = new ArrayAdapter<>(CreatedBudgetPage.this,
                 R.layout.custom_spinner,getResources().getStringArray(R.array.paymentPeriodOptions));
         paymentPeriodAdapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         paymentPeriodSpinnerBudget.setAdapter(paymentPeriodAdapter);
