@@ -81,9 +81,7 @@ public class CreatedBudgetPage extends AppCompatActivity {
         insuranceValue      = extras.getDouble("insuranceValue");
         healthMedicalValue  = extras.getDouble("healthMedicalValue");
         otherValue          = extras.getDouble("otherValue");
-
-        leftoverValue       = incomeValue - (foodValue + housingValue + transportationValue + utilitiesValue
-                                                       + insuranceValue + healthMedicalValue + otherValue);
+        leftoverValue       = extras.getDouble("leftoverValue");
 
     }
 

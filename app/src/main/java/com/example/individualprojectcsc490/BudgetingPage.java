@@ -64,6 +64,9 @@ public class BudgetingPage extends AppCompatActivity {
                 //pass variables to another screen
                 Intent i = new Intent(BudgetingPage.this, CreatedBudgetPage.class);
                 setupIntent(i);
+
+                i.putExtra("otherValue", CalculateBudgetedValue(otherValue));
+
                 startActivity(i);
             }
         });
@@ -145,6 +148,7 @@ public class BudgetingPage extends AppCompatActivity {
         i.putExtra("insuranceValue", CalculateBudgetedValue(insuranceValue));
         i.putExtra("healthMedicalValue", CalculateBudgetedValue(healthMedicalValue));
         i.putExtra("otherValue", CalculateBudgetedValue(otherValue));
+        i.putExtra("leftoverValue", CalculateBudgetedValue(100 -  sumCategories()));
     }
 
     /**
