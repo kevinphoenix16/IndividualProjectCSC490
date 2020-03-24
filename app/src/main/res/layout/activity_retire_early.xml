@@ -148,7 +148,7 @@
         android:layout_width="189dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:hint="@string/incomeHint"
+        android:hint="@string/incomeHint2"
         android:inputType="number|numberDecimal"
         android:text="@string/initValue"
         app:fontFamily="@font/alike"

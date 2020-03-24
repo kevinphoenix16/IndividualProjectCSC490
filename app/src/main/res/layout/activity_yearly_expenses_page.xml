@@ -58,6 +58,7 @@
         android:ems="10"
         android:hint="@string/healthMedicalHint"
         android:inputType="number|numberDecimal"
+        android:scrollHorizontally="false"
         android:text="@string/initValue"
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"

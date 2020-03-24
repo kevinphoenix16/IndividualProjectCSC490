@@ -17,8 +17,8 @@
     <string name="housingHint">Rent, Mortgage</string>
     <string name="transportationHint">Car, Gas, Travel</string>
     <string name="utilitiesHint">Water, Gas, Electric</string>
-    <string name="insuranceHint">Housing, Car, Health</string>
-    <string name="healthMedicalHint">Medicine, Injuries, Sickness</string>
+    <string name="insuranceHint">House, Car, Health</string>
+    <string name="healthMedicalHint">Medicine, Injury</string>
     <string name="otherHint">Misc.</string>
 
     <string-array name="paymentPeriodOptions">
@@ -105,7 +105,8 @@
     <string name="annualReturnCategory">Annual Return</string>
     <string name="withdrawalRateCategory">Withdrawal Rate</string>
 
-    <string name="savingsRateHint">From Savings Rate Calculator</string>
+    <string name="savingsRateHint">Use Savings Rate</string>
+    <string name="incomeHint2">Post-Tax Salary</string>
     <string name="portfolioHint">Amount Invested</string>
     <string name="annualReturnHint">Investments Return</string>
     <string name="withdrawalRateHint">Investments Withdrawn</string>
@@ -121,7 +122,7 @@
     <string name="taxesCategory">Taxes</string>
     <string name="expensesCategory">Expenses</string>
 
-    <string name="incomeHint">Pre-tax Salary or Yearly Pay</string>
+    <string name="incomeHint">Pre-tax Salary</string>
     <string name="taxesHint">Taxes on your income</string>
     <string name="expensesHint">Use Expenses Calculator</string>
 
