@@ -94,8 +94,13 @@ public class RetireEarlyPage extends AppCompatActivity {
 
         double yearsToRetire = numerator / denominator;
 
-        numberFormat = new DecimalFormat("#,##0.00 Years");
-        yearsToRetireFieldValue.setText(numberFormat.format(yearsToRetire));
+        if(!Double.isNaN(yearsToRetire)) {
+            numberFormat = new DecimalFormat("#,##0.00 Years");
+            yearsToRetireFieldValue.setText(numberFormat.format(yearsToRetire));
+        } else{
+            numberFormat = new DecimalFormat("#,##0.00 Years");
+            yearsToRetireFieldValue.setText(numberFormat.format(0.0));
+        }
     }
 
     //Calculates Net Worth at Retirement

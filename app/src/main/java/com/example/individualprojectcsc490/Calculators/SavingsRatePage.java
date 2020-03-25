@@ -40,12 +40,16 @@ public class SavingsRatePage extends AppCompatActivity {
                 savingsRate = computeSavingsRate();
                 numberFormat = new DecimalFormat("#,##0.00%");
 
-                if(savingsRate >= 0){
-                    savingsRateFieldValue.setText(numberFormat.format(savingsRate));
-                    savingsRateFieldValue.setTextColor(Color.GREEN);
+                if(!Double.isNaN(savingsRate)) {
+                    if (savingsRate >= 0) {
+                        savingsRateFieldValue.setText(numberFormat.format(savingsRate));
+                        savingsRateFieldValue.setTextColor(Color.GREEN);
+                    } else {
+                        savingsRateFieldValue.setText(numberFormat.format(savingsRate));
+                        savingsRateFieldValue.setTextColor(Color.RED);
+                    }
                 } else {
-                    savingsRateFieldValue.setText(numberFormat.format(savingsRate));
-                    savingsRateFieldValue.setTextColor(Color.RED);
+                    savingsRateFieldValue.setText(numberFormat.format(0.0));
                 }
             }
         });
