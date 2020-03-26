@@ -16,10 +16,10 @@
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
-        app:layout_constraintStart_toEndOf="@+id/leftoverCategroy"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/otherFieldValue"
         app:layout_constraintTop_toBottomOf="@+id/otherFieldValue"
-        app:layout_constraintVertical_bias="0.259" />
+        app:layout_constraintVertical_bias="0.266" />
 
     <TextView
         android:id="@+id/leftoverCategroy"
@@ -44,10 +44,10 @@
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
-        app:layout_constraintStart_toEndOf="@+id/otherCategroy"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/healthMedicalFieldValue"
         app:layout_constraintTop_toBottomOf="@+id/healthMedicalFieldValue"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.164" />
 
     <TextView
         android:id="@+id/healthMedicalFieldValue"
@@ -58,26 +58,24 @@
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.733"
-        app:layout_constraintStart_toEndOf="@+id/healthMedicalCategroy"
-        app:layout_constraintTop_toBottomOf="@+id/insuranceFieldValue"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/insuranceFieldValue"
+        app:layout_constraintTop_toTopOf="@+id/healthMedicalCategroy"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/utilitiesFieldValue"
         android:layout_width="148dp"
         android:layout_height="32dp"
-        android:layout_marginStart="127dp"
-        android:layout_marginLeft="127dp"
         android:text="TextView"
         android:textSize="24sp"
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/utilitiesCategroy"
-        app:layout_constraintTop_toBottomOf="@+id/transportationFieldValue"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintStart_toStartOf="@+id/transportationFieldValue"
+        app:layout_constraintTop_toTopOf="@+id/utilitiesCategroy"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/insuranceFieldValue"
@@ -88,10 +86,10 @@
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintStart_toEndOf="@+id/insuranceCategroy"
-        app:layout_constraintTop_toBottomOf="@+id/utilitiesFieldValue"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/utilitiesFieldValue"
+        app:layout_constraintTop_toTopOf="@+id/insuranceCategroy"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/transportationFieldValue"
@@ -102,10 +100,10 @@
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.742"
-        app:layout_constraintStart_toEndOf="@+id/transportationCategroy"
-        app:layout_constraintTop_toBottomOf="@+id/housingFieldValue"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/housingFieldValue"
+        app:layout_constraintTop_toTopOf="@+id/transportationCategroy"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/housingFieldValue"
@@ -116,10 +114,10 @@
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
-        app:layout_constraintStart_toEndOf="@+id/housingCategroy"
-        app:layout_constraintTop_toBottomOf="@+id/foodFieldValue"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/foodFieldValue"
+        app:layout_constraintTop_toTopOf="@+id/housingCategroy"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/otherCategroy"
@@ -176,13 +174,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/utilitiesCategroy"
         app:layout_constraintTop_toBottomOf="@+id/utilitiesCategroy"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.102" />
 
     <TextView
         android:id="@+id/transportationCategroy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:text="@string/transportationCategory"
         android:textSize="24sp"
         app:fontFamily="@font/alike"
@@ -191,7 +188,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/housingCategroy"
         app:layout_constraintTop_toBottomOf="@+id/housingCategroy"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.073" />
 
     <TextView
         android:id="@+id/healthMedicalCategroy"
