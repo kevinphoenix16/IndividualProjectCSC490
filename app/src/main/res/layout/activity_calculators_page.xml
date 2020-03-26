@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/savingsRateButton"
-        android:layout_width="250dp"
+        android:layout_width="275dp"
         android:layout_height="50dp"
         android:text="@string/saveRate_button"
         app:fontFamily="@font/alike"
@@ -22,7 +22,7 @@
 
     <Button
         android:id="@+id/yearlyExpensesButton"
-        android:layout_width="250dp"
+        android:layout_width="275dp"
         android:layout_height="50dp"
         android:text="@string/expenseRate_button"
         app:fontFamily="@font/alike"
@@ -47,7 +47,7 @@
 
     <Button
         android:id="@+id/retireEarlyButton"
-        android:layout_width="250dp"
+        android:layout_width="275dp"
         android:layout_height="50dp"
         android:text="@string/retireEarlyButton"
         app:fontFamily="@font/alike"
