@@ -9,21 +9,21 @@
 
     <Button
         android:id="@+id/savingsRateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:text="@string/saveRate_button"
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/yearlyExpensesButton"
+        app:layout_constraintTop_toBottomOf="@+id/yearlyExpensesButton"
+        app:layout_constraintVertical_bias="0.24" />
 
     <Button
         android:id="@+id/yearlyExpensesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:text="@string/expenseRate_button"
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,15 +47,15 @@
 
     <Button
         android:id="@+id/retireEarlyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
         android:text="@string/retireEarlyButton"
         app:fontFamily="@font/alike"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.752" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/savingsRateButton"
+        app:layout_constraintTop_toBottomOf="@+id/savingsRateButton"
+        app:layout_constraintVertical_bias="0.4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
